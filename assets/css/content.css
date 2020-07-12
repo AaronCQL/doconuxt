@@ -56,7 +56,8 @@
 }
 
 /* INLINE CODE */
-.nuxt-content p > code, .nuxt-content li > code {
+.nuxt-content p > code,
+.nuxt-content li > code {
   @apply bg-gray-200 p-1 rounded-md;
 }
 
@@ -82,11 +83,17 @@
 }
 
 .nuxt-content li {
-  @apply ml-6;
+  @apply ml-6 mt-1;
 }
 
-.nuxt-content input[type="checkbox"] {
-  @apply mr-1;
+/* CHECKBOX */
+.nuxt-content .task-list-item {
+  @apply list-none;
+  & input {
+    @apply float-left;
+    margin-left: -1.3em;
+    margin-top: 0.35em;
+  }
 }
 
 /* BLOCK QUOTE */

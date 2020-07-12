@@ -17,7 +17,7 @@ title: TODOs
 ### Minor
 
 - [ ] Inline code with class `select-all` for easy copy pasta
-- [ ] Style class `contains-task-list` (this list!) properly
+- [x] Style class `contains-task-list` (this list!) properly
 - [ ] Use `yaml` title instead of `H1` tag in markdown
 - [ ] [Search functionality](https://content.nuxtjs.org/examples#search)
 - [ ] Scroll to header anchor functionality
