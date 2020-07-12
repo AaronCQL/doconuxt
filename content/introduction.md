@@ -15,12 +15,15 @@ This is a **Nuxt Content Docs Template**. Here's a [link to no where]().
 
 Here is an **unordered list**:
 
-- Some unordered lists
+- Some unordered lists with some really long text about random things just to fill it up really well and to see how overflow looks like and with more content to fill than is ever truly needed
   - Second level
     - Third level
     - Third level
   - Second level
 - Another one?
+  - what
+  - [ ] checkbox
+  - [ ] another
 
 An **ordered list**:
 
