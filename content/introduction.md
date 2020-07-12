@@ -11,6 +11,14 @@ This is a **Nuxt Content Docs Template**. Here's a [link to no where]().
 > Second line?  
 > MORE!
 
+## Table
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
 ## Lists
 
 Here is an **unordered list**:
