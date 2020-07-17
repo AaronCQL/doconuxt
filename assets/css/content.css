@@ -62,9 +62,13 @@
 }
 
 /* INLINE CODE */
-.nuxt-content p > code,
-.nuxt-content li > code {
-  @apply bg-gray-200 p-1 rounded-md select-all;
+.nuxt-content {
+  & p > code,
+  & li > code,
+  & td > code,
+  & th > code {
+    @apply bg-gray-200 p-1 rounded-md select-all;
+  }
 }
 
 /* .nuxt-content > .nuxt-content-highlight {

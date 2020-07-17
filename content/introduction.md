@@ -13,9 +13,9 @@ This is a **Nuxt Content Docs Template**. Here's a [link to no where]().
 
 ## Table
 
-| This is col 1 | This is col 2 | This is col 3 |
+| This is col 1 | This is col 2 | This is `col 3` |
 | ------------- | :-----------: | ------------: |
-| col 1 is      | left-aligned  |         $1600 |
+| col 1 is      | left-aligned  |         `$1600` |
 | col 2 is      |   centered    |           $12 |
 | col 3 is      | right-aligned |            $1 |
 
