@@ -1,14 +1,16 @@
-/* HEADERS */
 .nuxt-content {
   @apply px-4;
+}
 
+/* HEADERS */
+.nuxt-content {
   & h1,
   & h2,
   & h3,
   & h4,
   & h5,
   & h6 {
-    @apply mt-6 mb-2;
+    @apply mt-6 mb-4;
     &:hover {
       @apply text-primary cursor-pointer;
       &:before {
@@ -32,19 +34,23 @@
 }
 
 .nuxt-content h4 {
-  @apply text-xl font-semibold;
+  @apply text-xl font-bold;
 }
 
 .nuxt-content h5 {
-  @apply text-lg font-semibold;
+  @apply text-lg font-bold;
 }
 
 .nuxt-content h6 {
-  @apply text-base font-semibold;
+  @apply text-base font-bold;
 }
 
 .nuxt-content p {
   @apply mt-4;
+}
+
+.nuxt-content strong {
+  @apply font-bold;
 }
 
 /* LINKS */
