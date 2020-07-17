@@ -100,3 +100,17 @@
 .nuxt-content blockquote {
   @apply border-l-4 border-gray-400 pl-2 text-gray-700;
 }
+
+/* TABLES */
+.nuxt-content {
+  & table {
+    @apply border-collapse;
+  }
+  & th,
+  & td {
+    @apply border border-gray-400 py-1 px-3;
+  }
+  & thead {
+    @apply bg-gray-200;
+  }
+}
