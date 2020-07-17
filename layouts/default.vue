@@ -54,4 +54,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="postcss">
+.nuxt-link-exact-active {
+  @apply text-primary font-bold;
+}
+</style>
