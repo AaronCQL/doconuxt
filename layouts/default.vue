@@ -25,7 +25,7 @@
         <nuxt-link
           v-for="link in navLinks"
           :key="link.title"
-          class="cursor-pointer text-lg font-semibold hover:text-primary text-gray-800 w-full"
+          class="cursor-pointer text-lg font-semibold hover:text-primary text-gray-800 w-full link-active"
           :to="link.path"
         >
           {{ link.title }}
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="postcss">
-.nuxt-link-exact-active {
+.link-active.nuxt-link-exact-active {
   @apply text-green-700 bg-primary bg-opacity-10 rounded px-2;
 }
 </style>
