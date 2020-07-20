@@ -29,12 +29,22 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~/assets/css/content.css"],
+  css: [
+    "@/assets/css/content.css",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
+  /*
+   ** Prevent purge of fontawesome css
+   ** https://github.com/FortAwesome/vue-fontawesome#purgecss
+   */
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/],
+  },
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ["@/plugins/navLinks.js"],
+  plugins: ["@/plugins/navLinks.js", "@plugins/fontawesome.js"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
