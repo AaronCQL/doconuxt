@@ -28,7 +28,7 @@
     </nav>
 
     <!-- BODY -->
-    <div class="flex content-max-height overflow-y-hidden">
+    <div class="flex h-screen content-max-height overflow-y-hidden">
       <nav
         class="z-40 bg-white fixed lg:static max-h-full w-screen lg:w-3/12 lg:max-w-xs overflow-y-auto lg:border-r p-4 flex-col shadow-lg lg:shadow-none space-y-1"
         :class="isNavOpen ? 'flex' : 'hidden lg:flex'"
