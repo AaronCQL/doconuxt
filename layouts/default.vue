@@ -21,14 +21,14 @@
 
     <!-- BODY -->
     <div class="flex overflow-y-hidden h-full pt-16">
-      <nav class="w-84 overflow-y-auto border-r p-4 flex flex-col">
+      <nav class="w-3/12 max-w-xs overflow-y-auto border-r p-4 flex flex-col">
         <nuxt-link
-          v-for="article in articles"
-          :key="article.title"
+          v-for="link in navLinks"
+          :key="link.title"
           class="cursor-pointer text-lg font-semibold hover:text-primary text-gray-800 w-full"
-          :to="article.path"
+          :to="link.path"
         >
-          {{ article.title }}
+          {{ link.title }}
         </nuxt-link>
       </nav>
       <Nuxt class="flex-1 overflow-y-auto" />
@@ -38,14 +38,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      articles: [],
-    };
-  },
-  async created() {
-    // TODO: use vuex store instead to support creating/deleting md files in dev mode
-    this.articles = await this.$content("/").only(["title", "path"]).fetch();
+  computed: {
+    navLinks() {
+      return this.$store.state.navLinks;
+    },
   },
 };
 </script>
