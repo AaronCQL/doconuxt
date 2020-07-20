@@ -21,19 +21,15 @@
 
     <!-- BODY -->
     <div class="flex overflow-y-hidden h-full pt-16">
-      <nav class="flex-none w-84 overflow-y-auto border-r p-4">
-        <ul>
-          <nuxt-link
-            v-for="article in articles"
-            :key="article.title"
-            class="cursor-pointer text-lg font-semibold hover:text-primary text-gray-800"
-            :to="article.path"
-          >
-            <li>
-              {{ article.title }}
-            </li>
-          </nuxt-link>
-        </ul>
+      <nav class="w-84 overflow-y-auto border-r p-4 flex flex-col">
+        <nuxt-link
+          v-for="article in articles"
+          :key="article.title"
+          class="cursor-pointer text-lg font-semibold hover:text-primary text-gray-800 w-full"
+          :to="article.path"
+        >
+          {{ article.title }}
+        </nuxt-link>
       </nav>
       <Nuxt class="flex-1 overflow-y-auto" />
     </div>
@@ -56,6 +52,6 @@ export default {
 
 <style lang="postcss">
 .nuxt-link-exact-active {
-  @apply text-primary font-bold;
+  @apply text-green-700 bg-primary bg-opacity-10 rounded px-2;
 }
 </style>
