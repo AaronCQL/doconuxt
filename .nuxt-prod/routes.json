@@ -1,0 +1,16 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/aaroncql/Desktop/dev/nuxt-content-docs-template/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_e26ab054"
+  },
+  {
+    "name": "slug",
+    "path": "/:slug",
+    "component": "/home/aaroncql/Desktop/dev/nuxt-content-docs-template/pages/_slug.vue",
+    "chunkName": "pages/_slug",
+    "_name": "_e5d7f2e4"
+  }
+]

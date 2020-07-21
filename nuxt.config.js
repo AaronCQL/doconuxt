@@ -83,4 +83,5 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  buildDir: process.env.NODE_ENV === "production" ? ".nuxt-prod" : ".nuxt",
 };
