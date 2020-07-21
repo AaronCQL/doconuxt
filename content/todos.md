@@ -13,6 +13,7 @@ title: TODOs
 - [ ] Themes with [Nuxt color mode](https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/)
 - [ ] Prism themes for code syntax highlighting
 - [ ] Locale/language picker
+- [ ] Rework main layout?
 
 ### Minor
 
@@ -24,7 +25,7 @@ title: TODOs
 - [ ] Scroll to header anchor functionality
 - [x] In `default` layout, use Vuex and `nuxtServerInit` to get `content` changes to [support Dev mode hot reload](https://content.nuxtjs.org/advanced#handling-hot-reload)
 - [ ] Test out full suite of markdown styles
-- [ ] External links should have target `_blank` to open in another tab
+- [x] External links should have target `_blank` to open in another tab
 - [ ] Table of contents for current page
 
 ## Future
