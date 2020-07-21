@@ -71,6 +71,9 @@ typings/
 # Nuxt generate
 dist
 
+# do not ignore dist in nuxt-prod
+!.nuxt-prod/dist
+
 # vuepress build output
 .vuepress/dist
 
