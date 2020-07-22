@@ -51,12 +51,9 @@
 
 /* INLINE CODE */
 .nuxt-content {
-  & p > code,
-  & li > code,
-  & td > code,
-  & th > code {
+  & :not(pre) > code {
     @apply bg-gray-200 rounded select-all;
-    padding: 0.1rem 0.2rem;
+    padding: 0.1em 0.2em;
   }
 }
 
