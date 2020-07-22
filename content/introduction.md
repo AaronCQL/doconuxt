@@ -14,10 +14,10 @@ This is a **Nuxt Content Docs Template**. Here's a [link to no where]().
 ## Table
 
 | This is col 1 | This is col 2 | This is `col 3` |
-| ------------- | :-----------: | ------------: |
+| ------------- | :-----------: | --------------: |
 | col 1 is      | left-aligned  |         `$1600` |
-| col 2 is      |   centered    |           $12 |
-| col 3 is      | right-aligned |            $1 |
+| col 2 is      |   centered    |             $12 |
+| col 3 is      | right-aligned |              $1 |
 
 ## Lists
 
@@ -82,6 +82,8 @@ public class Main {
 
 #### H4 Fourth Header
 
-##### H5 Fifth Header
+H5 and H6 headers are unstyled. Please do not use them.
 
-###### H6 Sixth Header
+## Markdown test
+
+`Lorem ipsum dolor` **sit amet consectetur** *adipisicing elit*. Maiores, debitis odio? Consectetur, `dignissimos quisquam`. Qui impedit ducimus voluptate magnam officiis enim commodi ratione quam. Alias vero excepturi consequatur quidem, repellendus natus nulla quaerat. Commodi, eaque sed? Corrupti, voluptate. Dolorem repellat magnam pariatur esse rerum earum ipsam accusantium, optio, cum nihil ex facere eligendi! Cum sint nostrum, minus ea doloremque facere temporibus culpa eligendi soluta expedita similique at quod velit quibusdam laudantium, officiis sunt obcaecati voluptatem? Quo dolor excepturi harum! Quod doloremque repellendus cum ipsum vitae quisquam id animi soluta! Modi pariatur eum ad laboriosam voluptas? Suscipit, quisquam laboriosam? Omnis, aperiam.

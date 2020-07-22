@@ -12,45 +12,33 @@
   & h6 {
     @apply mt-6 mb-4;
     &:hover {
-      @apply text-primary cursor-pointer;
-      &:before {
-        content: "# ";
-        @apply font-light;
-      }
+      @apply cursor-pointer;
     }
   }
 }
 
 .nuxt-content h1 {
-  @apply text-4xl font-extrabold border-b border-gray-200;
+  @apply text-3xl font-extrabold border-b border-gray-200;
 }
 
 .nuxt-content h2 {
-  @apply text-3xl font-bold border-b border-gray-200;
+  @apply text-2xl font-bold border-b border-gray-200;
 }
 
 .nuxt-content h3 {
-  @apply text-2xl font-bold;
-}
-
-.nuxt-content h4 {
   @apply text-xl font-bold;
 }
 
-.nuxt-content h5 {
+.nuxt-content h4 {
   @apply text-lg font-bold;
 }
 
-.nuxt-content h6 {
-  @apply text-base font-bold;
-}
-
 .nuxt-content p {
-  @apply mt-4;
+  @apply my-4;
 }
 
 .nuxt-content strong {
-  @apply font-bold;
+  @apply font-semibold;
 }
 
 /* LINKS */
@@ -67,7 +55,8 @@
   & li > code,
   & td > code,
   & th > code {
-    @apply bg-gray-200 p-1 rounded-md select-all;
+    @apply bg-gray-200 rounded select-all;
+    padding: 0.1rem 0.2rem;
   }
 }
 
@@ -80,7 +69,7 @@
   & > ul,
   & > ol {
     /* overall margins of one list block */
-    @apply mb-4 ml-4;
+    @apply mb-4;
   }
 }
 
@@ -93,7 +82,7 @@
 }
 
 .nuxt-content li {
-  @apply ml-6 mt-1;
+  @apply ml-5 pl-1 my-1;
 }
 
 /* CHECKBOX */

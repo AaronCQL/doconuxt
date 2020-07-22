@@ -4,7 +4,7 @@
     "../server/index.spa.html",
     "../server/index.ssr.html",
     "LICENSES",
-    "app.d216edc.js",
+    "app.232e6d0.js",
     "commons/app.b7c4c2f.js",
     "content/plugin.js.61bd44d.js",
     "pages/_slug.25e3694.js",
@@ -17,7 +17,7 @@
     "runtime.3c58135.js",
     "commons/app.b7c4c2f.js",
     "vendors~app.d309910.js",
-    "app.d216edc.js"
+    "app.232e6d0.js"
   ],
   "async": [
     "content/plugin.js.61bd44d.js",
@@ -799,7 +799,7 @@
   },
   "assetsMapping": {
     "1a3ae26b": [
-      "app.d216edc.js"
+      "app.232e6d0.js"
     ],
     "085a35c4": [
       "commons/app.b7c4c2f.js"
