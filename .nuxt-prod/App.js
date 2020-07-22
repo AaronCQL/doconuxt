@@ -10,7 +10,7 @@ import '../assets/css/content.css'
 
 import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
 
-import '../node_modules/prismjs/themes/prism.css'
+import '../node_modules/prism-themes/themes/prism-dracula.css'
 
 import _6f6c098b from '../layouts/default.vue'
 
