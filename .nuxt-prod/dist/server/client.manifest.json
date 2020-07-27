@@ -4,25 +4,25 @@
     "../server/index.spa.html",
     "../server/index.ssr.html",
     "LICENSES",
-    "app.83cb3e3.js",
-    "commons/app.b7c4c2f.js",
+    "app.98791c8.js",
+    "commons/app.05aa5a9.js",
     "content/plugin.js.61bd44d.js",
     "pages/_slug.25e3694.js",
-    "pages/index.e27c391.js",
-    "runtime.3c58135.js",
+    "pages/index.68e12c2.js",
+    "runtime.747c5ee.js",
     "vendors~app.08e3739.js",
     "vendors~content/plugin.js.ba11e85.js"
   ],
   "initial": [
-    "runtime.3c58135.js",
-    "commons/app.b7c4c2f.js",
+    "runtime.747c5ee.js",
+    "commons/app.05aa5a9.js",
     "vendors~app.08e3739.js",
-    "app.83cb3e3.js"
+    "app.98791c8.js"
   ],
   "async": [
     "content/plugin.js.61bd44d.js",
     "pages/_slug.25e3694.js",
-    "pages/index.e27c391.js",
+    "pages/index.68e12c2.js",
     "vendors~content/plugin.js.ba11e85.js"
   ],
   "modules": {
@@ -167,7 +167,7 @@
     "2f2bc18d": [
       3
     ],
-    "96c50ba4": [
+    "5dd60626": [
       3
     ],
     "1d25fcfa": [
@@ -176,7 +176,7 @@
     "5d7afb82": [
       3
     ],
-    "fa4f18b0": [
+    "c1601332": [
       3
     ],
     "377a2a11": [
@@ -772,13 +772,13 @@
     "1ee22086": [
       7
     ],
-    "c7d2f72a": [
+    "7e5af299": [
       7
     ],
     "69f0b777": [
       7
     ],
-    "cf256a36": [
+    "7ab1b913": [
       7
     ],
     "224f6316": [
@@ -799,10 +799,10 @@
   },
   "assetsMapping": {
     "1a3ae26b": [
-      "app.83cb3e3.js"
+      "app.98791c8.js"
     ],
     "085a35c4": [
-      "commons/app.b7c4c2f.js"
+      "commons/app.05aa5a9.js"
     ],
     "be5ea2d0": [
       "content/plugin.js.61bd44d.js"
@@ -811,10 +811,10 @@
       "pages/_slug.25e3694.js"
     ],
     "2a130dde": [
-      "pages/index.e27c391.js"
+      "pages/index.68e12c2.js"
     ],
     "6fca0322": [
-      "runtime.3c58135.js"
+      "runtime.747c5ee.js"
     ],
     "7ec635d8": [
       "vendors~app.08e3739.js"

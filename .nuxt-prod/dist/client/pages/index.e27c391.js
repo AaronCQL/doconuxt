@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{215:function(t,e,n){"use strict";n.r(e);var l={},o=n(39),component=Object(o.a)(l,(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"m-auto text-center text-4xl font-extrabold"},[this._v("\n  Supposedly the landing page\n")])}),[],!1,null,null,null);e.default=component.exports}}]);
