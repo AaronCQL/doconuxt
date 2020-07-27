@@ -46,7 +46,7 @@
   &:hover {
     @apply underline;
   }
-  @apply text-primary font-semibold;
+  @apply text-primary font-semibold break-words;
 }
 
 /* INLINE CODE */
