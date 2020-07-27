@@ -57,9 +57,10 @@
   }
 }
 
-/* .nuxt-content > .nuxt-content-highlight {
-  @apply -mx-4;
-} */
+/* CODE BLOCKS */
+.nuxt-content > .nuxt-content-highlight {
+  @apply text-base;
+}
 
 /* LISTS */
 .nuxt-content {

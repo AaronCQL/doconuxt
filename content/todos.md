@@ -11,7 +11,7 @@ title: TODOs
 - [ ] Side navbar functionality (how to arrange pages?)
   - [ ] Mobile responsiveness
 - [ ] Themes with [Nuxt color mode](https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/)
-- [ ] Prism themes for code syntax highlighting
+- [x] Prism themes for code syntax highlighting
 - [ ] Locale/language picker
 - [ ] Rework main layout?
 
