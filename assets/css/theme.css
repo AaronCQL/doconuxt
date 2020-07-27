@@ -1,0 +1,43 @@
+/* 
+Theme configuration for colours; uses Tailwind colours.
+*/
+:root {
+  --text: theme("colors.gray.900");
+  --text-secondary: theme("colors.gray.700");
+  --bg: theme("colors.white");
+  --bg-secondary: theme("colors.gray.200");
+  --primary: theme("colors.green.600");
+  --border: theme("colors.gray.400");
+  --border-secondary: theme("colors.gray.200");
+}
+
+.dark-mode {
+  --text: theme("colors.gray.100");
+  --text-secondary: theme("colors.gray.400");
+  --bg: theme("colors.gray.900");
+  --bg-secondary: theme("colors.gray.800");
+  --primary: theme("colors.green.400");
+  --border: theme("colors.gray.700");
+  --border-secondary: theme("colors.gray.800");
+}
+
+.sepia-mode {
+  --text: #433422;
+  --primary: #504231;
+  --bg: #f1e7d0;
+  /* --bg-secondary: #eae0c9; */
+  --border: #ded0bf;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s;
+}
+
+div,
+nav,
+header,
+footer {
+  background-color: inherit;
+}

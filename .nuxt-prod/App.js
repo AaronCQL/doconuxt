@@ -8,6 +8,8 @@ import '../assets/css/tailwind.css'
 
 import '../assets/css/content.css'
 
+import '../assets/css/theme.css'
+
 import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
 
 import '../node_modules/prism-themes/themes/prism-dracula.css'

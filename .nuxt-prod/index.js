@@ -16,6 +16,8 @@ import nuxt_plugin_plugin_0bbb733e from 'nuxt_plugin_plugin_0bbb733e' // Source:
 import nuxt_plugin_pluginclient_1bb56fba from 'nuxt_plugin_pluginclient_1bb56fba' // Source: ./content/plugin.client.js (mode: 'client')
 import nuxt_plugin_pluginserver_fd223d7c from 'nuxt_plugin_pluginserver_fd223d7c' // Source: ./content/plugin.server.js (mode: 'server')
 import nuxt_plugin_axios_401be958 from 'nuxt_plugin_axios_401be958' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_pluginserver_798b2268 from 'nuxt_plugin_pluginserver_798b2268' // Source: ./color-mode/plugin.server.js (mode: 'server')
+import nuxt_plugin_pluginclient_13d1b0e0 from 'nuxt_plugin_pluginclient_13d1b0e0' // Source: ./color-mode/plugin.client.js (mode: 'client')
 import nuxt_plugin_navLinks_3e6bb126 from 'nuxt_plugin_navLinks_3e6bb126' // Source: ../plugins/navLinks.js (mode: 'all')
 import nuxt_plugin_fontawesome_29e6161c from 'nuxt_plugin_fontawesome_29e6161c' // Source: ../plugins/fontawesome.js (mode: 'all')
 
@@ -64,7 +66,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"nuxt-content-docs-template","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"nuxt-content-docs-template","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[{"hid":"nuxt-color-mode-script","innerHTML":"!function (){\"use strict\";var e=window,t=document,s=t.documentElement,n=[\"dark\",\"light\"],a=function(e){for(var s=e+\"=\",n=t.cookie.split(\";\"),a=0;a\u003Cn.length;a++){for(var o=n[a];\" \"===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}(\"nuxt-color-mode\")||\"system\",o=\"system\"===a?i():a;function r(e){var t=e+\"-mode\";s.classList?s.classList.add(t):s.className+=\" \"+t}function c(t){return e.matchMedia(\"(prefers-color-scheme\"+t+\")\")}function i(){if(e.matchMedia&&\"not all\"!==c(\"\").media)for(var t of n)if(c(\":\"+t).matches)return t;return\"light\"}r(o),e[\"__NUXT_COLOR_MODE__\"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+\"-mode\";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,\"g\"),\"\")}}}();\n","pbody":true}],"__dangerouslyDisableSanitizersByTagID":{"nuxt-color-mode-script":["innerHTML"]}},
 
     store,
     router,
@@ -207,6 +209,14 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_401be958 === 'function') {
     await nuxt_plugin_axios_401be958(app.context, inject)
+  }
+
+  if (process.server && typeof nuxt_plugin_pluginserver_798b2268 === 'function') {
+    await nuxt_plugin_pluginserver_798b2268(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_pluginclient_13d1b0e0 === 'function') {
+    await nuxt_plugin_pluginclient_13d1b0e0(app.context, inject)
   }
 
   if (typeof nuxt_plugin_navLinks_3e6bb126 === 'function') {

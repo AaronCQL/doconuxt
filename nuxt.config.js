@@ -31,6 +31,7 @@ export default {
    */
   css: [
     "@/assets/css/content.css",
+    "@/assets/css/theme.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   /*
@@ -58,6 +59,8 @@ export default {
     "@nuxtjs/eslint-module",
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
+    // https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/#install-the-color-mode-module
+    "@nuxtjs/color-mode",
   ],
   /*
    ** Nuxt.js modules

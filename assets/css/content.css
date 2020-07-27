@@ -18,11 +18,13 @@
 }
 
 .nuxt-content h1 {
-  @apply text-3xl font-extrabold border-b border-gray-200;
+  @apply text-3xl font-extrabold border-b;
+  border-color: var(--border-secondary);
 }
 
 .nuxt-content h2 {
-  @apply text-2xl font-bold border-b border-gray-200;
+  @apply text-2xl font-bold border-b;
+  border-color: var(--border-secondary);
 }
 
 .nuxt-content h3 {
@@ -46,14 +48,16 @@
   &:hover {
     @apply underline;
   }
-  @apply text-primary font-semibold break-words;
+  @apply font-semibold break-words;
+  color: var(--primary);
 }
 
 /* INLINE CODE */
 .nuxt-content {
   & :not(pre) > code {
-    @apply bg-gray-200 rounded select-all;
+    @apply rounded select-all;
     padding: 0.1em 0.2em;
+    background-color: var(--bg-secondary);
   }
 }
 
@@ -95,7 +99,9 @@
 
 /* BLOCK QUOTE */
 .nuxt-content blockquote {
-  @apply border-l-4 border-gray-400 pl-2 text-gray-700;
+  @apply border-l-4 pl-2;
+  border-color: var(--border);
+  color: var(--text-secondary);
 }
 
 /* TABLES */
@@ -105,9 +111,10 @@
   }
   & th,
   & td {
-    @apply border border-gray-400 py-1 px-3;
+    @apply border py-1 px-3;
+    border-color: var(--border);
   }
   & thead {
-    @apply bg-gray-200;
+    background-color: var(--bg-secondary);
   }
 }
