@@ -1,0 +1,12 @@
+@import "katex/dist/katex.css";
+
+/* 
+this is needed to style the fraction bars correctly
+see: https://github.com/KaTeX/KaTeX/issues/2236
+*/
+*,
+::after,
+::before {
+  /* use primary text colour */
+  border-color: var(--text);
+}

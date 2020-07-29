@@ -74,6 +74,17 @@ public class Main {
 }
 ```
 
+## Math section
+
+Here is some inline math: $Pr(x) = 0.23 \text{sd}$
+
+$x = 23$
+
+$$
+L = \frac{1}{2} \rho v^2 S C_L \\
+\sum_e^3 \pi
+$$
+
 # H1 First Header
 
 ## H2 Second Header

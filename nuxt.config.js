@@ -32,6 +32,7 @@ export default {
   css: [
     "@/assets/css/content.css",
     "@/assets/css/theme.css",
+    "@/assets/css/katex.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   /*
@@ -85,6 +86,8 @@ export default {
       prism: {
         theme: "prism-themes/themes/prism-dracula.css",
       },
+      remarkPlugins: ["remark-math"],
+      rehypePlugins: ["rehype-katex"],
     },
   },
   /*
