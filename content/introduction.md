@@ -76,13 +76,16 @@ public class Main {
 
 ## Math section
 
-Here is some inline math: $Pr(x) = 0.23 \text{sd}$
+Here is some inline math: $e=mc^2$
 
-$x = 23$
+And some centered math:
 
 $$
-L = \frac{1}{2} \rho v^2 S C_L \\
-\sum_e^3 \pi
+\nabla L_D(\vec{w}) = \left[ \frac{\partial L_D}{\partial w_0},\dots, \frac{\partial L_D}{\partial w_n}  \right]
+$$
+
+$$
+e^{i\pi} + 1 = 0
 $$
 
 # H1 First Header
