@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <header
       style="border-color: var(--border);"
-      class="z-50 sticky top-0 h-16 w-full px-4 lg:px-12 border-b flex justify-between items-center"
+      class="z-50 fixed top-0 h-16 w-full px-4 lg:px-12 border-b flex justify-between items-center"
     >
       <nuxt-link
         class="cursor-pointer text-2xl font-bold hover:text-primary"
@@ -27,23 +27,25 @@
       </div>
     </header>
 
-    <nav
-      style="border-color: var(--border);"
-      class="z-40 h-full flex-col fixed w-64 overflow-y-auto border-r p-2 space-y-1"
-      :class="isNavOpen ? 'flex' : 'hidden md:flex'"
-    >
-      <nuxt-link
-        v-for="link in navLinks"
-        :key="link.title"
-        class="cursor-pointer text-lg font-semibold hover:text-primary w-full link-active"
-        :to="link.path"
-        @click.native="closeNav"
+    <main class="pt-16">
+      <nav
+        style="border-color: var(--border);"
+        class="z-40 h-full flex-col fixed w-64 overflow-y-auto border-r p-2 space-y-1"
+        :class="isNavOpen ? 'flex' : 'hidden md:flex'"
       >
-        {{ link.title }}
-      </nuxt-link>
-    </nav>
+        <nuxt-link
+          v-for="link in navLinks"
+          :key="link.title"
+          class="cursor-pointer text-lg font-semibold hover:text-primary w-full link-active"
+          :to="link.path"
+          @click.native="closeNav"
+        >
+          {{ link.title }}
+        </nuxt-link>
+      </nav>
 
-    <Nuxt class="md:pl-64" />
+      <Nuxt class="md:pl-64" />
+    </main>
   </div>
 </template>
 

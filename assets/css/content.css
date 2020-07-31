@@ -11,9 +11,6 @@
   & h5,
   & h6 {
     @apply mt-6 mb-4;
-    &:hover {
-      @apply cursor-pointer;
-    }
   }
 }
 
@@ -44,7 +41,7 @@
 }
 
 /* LINKS */
-.nuxt-content a {
+.nuxt-content :not(h1, h2, h3, h4, h5, h6) > a {
   &:hover {
     @apply underline;
   }

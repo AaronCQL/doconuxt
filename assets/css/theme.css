@@ -21,7 +21,7 @@ Theme configuration for colours; uses Tailwind colours.
   --border-secondary: theme("colors.gray.800");
 }
 
-.sepia-mode {
+.black-mode {
   --text: #433422;
   --primary: #504231;
   --bg: #f1e7d0;
@@ -38,6 +38,8 @@ body {
 div,
 nav,
 header,
+main,
+article,
 footer {
   background-color: inherit;
 }

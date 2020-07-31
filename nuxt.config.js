@@ -82,11 +82,16 @@ export default {
    ** See https://content.nuxtjs.org/configuration
    */
   content: {
+    liveEdit: false,
     markdown: {
       prism: {
         theme: "prism-themes/themes/prism-dracula.css",
       },
-      remarkPlugins: ["remark-math"],
+      remarkPlugins: [
+        "remark-math",
+        // https://github.com/remarkjs/remark-autolink-headings
+        ["remark-autolink-headings", { behavior: "wrap" }],
+      ],
       rehypePlugins: ["rehype-katex"],
     },
   },
