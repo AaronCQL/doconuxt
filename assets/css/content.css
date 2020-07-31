@@ -18,21 +18,21 @@
 }
 
 .nuxt-content h1 {
-  @apply text-3xl font-extrabold border-b;
+  @apply text-4xl font-extrabold border-b;
   border-color: var(--border-secondary);
 }
 
 .nuxt-content h2 {
-  @apply text-2xl font-bold border-b;
+  @apply text-3xl font-bold border-b;
   border-color: var(--border-secondary);
 }
 
 .nuxt-content h3 {
-  @apply text-xl font-bold;
+  @apply text-2xl font-bold;
 }
 
 .nuxt-content h4 {
-  @apply text-lg font-bold;
+  @apply text-xl font-bold;
 }
 
 .nuxt-content p {
@@ -107,7 +107,7 @@
 /* TABLES */
 .nuxt-content {
   & table {
-    @apply border-collapse;
+    @apply border-collapse overflow-auto;
   }
   & th,
   & td {
