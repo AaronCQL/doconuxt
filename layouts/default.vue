@@ -16,6 +16,7 @@
           placeholder="Search text"
           type="text"
         /> -->
+        <theme-switcher></theme-switcher>
         <button
           title="Toggle Navigation"
           class="md:hidden focus:outline-none px-4 py-2 text-xl hover:text-primary"

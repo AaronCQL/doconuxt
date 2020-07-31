@@ -12,7 +12,7 @@ Theme configuration for colours; uses Tailwind colours.
 }
 
 .dark-mode {
-  --text: theme("colors.gray.100");
+  --text: theme("colors.gray.200");
   --text-secondary: theme("colors.gray.400");
   --bg: theme("colors.gray.900");
   --bg-secondary: theme("colors.gray.800");
@@ -22,11 +22,13 @@ Theme configuration for colours; uses Tailwind colours.
 }
 
 .black-mode {
-  --text: #433422;
-  --primary: #504231;
-  --bg: #f1e7d0;
-  /* --bg-secondary: #eae0c9; */
-  --border: #ded0bf;
+  --text: theme("colors.gray.200");
+  --text-secondary: theme("colors.gray.400");
+  --bg: theme("colors.black");
+  --bg-secondary: theme("colors.gray.900");
+  --primary: theme("colors.green.400");
+  --border: theme("colors.gray.800");
+  --border-secondary: theme("colors.gray.900");
 }
 
 body {
