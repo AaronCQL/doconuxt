@@ -51,7 +51,7 @@ And a **mixed one**:
    - Another second level
 2. Second Item
 
-## Code Section
+## Code section
 
 This is an `inline code`.
 
@@ -88,13 +88,13 @@ $$
 e^{i\pi} + 1 = 0
 $$
 
-# H1 First Header
+# H1 First header
 
-## H2 Second Header
+## H2 Second header
 
-### H3 Third Header
+### H3 Third header
 
-#### H4 Fourth Header
+#### H4 Fourth header
 
 H5 and H6 headers are unstyled. Please do not use them.
 
