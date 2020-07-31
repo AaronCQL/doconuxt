@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="postcss">
-.link-active.nuxt-link-exact-active {
+.link-active.nuxt-link-active {
   @apply text-primary;
 }
 </style>
