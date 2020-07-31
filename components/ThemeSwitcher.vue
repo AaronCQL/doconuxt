@@ -1,5 +1,5 @@
 <template>
-  <button class="text-2xl py-1 px-2" @click="$colorMode.preference = nextTheme">
+  <button class="text-xl py-1 px-2" @click="$colorMode.preference = nextTheme">
     <font-awesome-icon :icon="faIcon" />
   </button>
 </template>

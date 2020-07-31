@@ -11,6 +11,12 @@
   & h5,
   & h6 {
     @apply mt-6 mb-4;
+
+    /* ensure hash link does not head butt the header */
+    &::before {
+      @apply block invisible pointer-events-none -mt-20 h-20;
+      content: " ";
+    }
   }
 }
 

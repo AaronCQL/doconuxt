@@ -8,7 +8,7 @@
         class="cursor-pointer text-2xl font-bold hover:text-primary"
         to="/"
       >
-        Nuxt Content Docs Template
+        Doconuxt
       </nuxt-link>
       <div>
         <!-- <input
