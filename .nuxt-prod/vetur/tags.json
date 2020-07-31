@@ -4,5 +4,11 @@
   },
   "LazyLogo": {
     "description": "Auto imported from components/Logo.vue"
+  },
+  "ThemeSwitcher": {
+    "description": "Auto imported from components/ThemeSwitcher.vue"
+  },
+  "LazyThemeSwitcher": {
+    "description": "Auto imported from components/ThemeSwitcher.vue"
   }
 }

@@ -19,6 +19,9 @@ class QueryBuilder {
     this.options = options || {}
     this.onlyKeys = null
     this.withoutKeys = null
+    this.sortKeys = []
+    this.limitN = null
+    this.skipN = null
 
     if (!text) {
       // Remove text field from response
@@ -57,7 +60,7 @@ class QueryBuilder {
    * @returns {QueryBuilder} Returns current instance to be chained
    */
   sortBy (field, direction) {
-    this.query = this.query.simplesort(field, { desc: direction === 'desc' })
+    this.sortKeys.push([field, direction === 'desc'])
     return this
   }
 
@@ -169,7 +172,7 @@ class QueryBuilder {
   limit (n) {
     if (typeof n === 'string') { n = parseInt(n) }
 
-    this.query = this.query.limit(n)
+    this.limitN = n
     return this
   }
 
@@ -181,7 +184,7 @@ class QueryBuilder {
   skip (n) {
     if (typeof n === 'string') { n = parseInt(n) }
 
-    this.query = this.query.offset(n)
+    this.skipN = n
     return this
   }
 
@@ -191,10 +194,23 @@ class QueryBuilder {
    */
   // eslint-disable-next-line require-await
   async fetch () {
+    if (this.sortKeys && this.sortKeys.length) {
+      this.query = this.query.compoundsort(this.sortKeys)
+    }
+    if (this.skipN) {
+      this.query = this.query.offset(this.skipN)
+    }
+    if (this.limitN) {
+      this.query = this.query.limit(this.limitN)
+    }
     // Collect data without meta fields
     let data = this.query.data({ removeMeta: true })
     // Handle only keys
     if (this.onlyKeys) {
+      // Add `path` and `extension` to onlyKeys if watch to ensure live edit
+      if (this.options.watch) {
+        this.onlyKeys.push('path', 'extension')
+      }
       // Map data and returns object picked by keys
       const fn = data => data.map(item => pick(item, this.onlyKeys))
       // Apply pick during postprocess
@@ -202,6 +218,10 @@ class QueryBuilder {
     }
     // Handle without keys
     if (this.withoutKeys) {
+      // Remove `path` and `extension` from withoutKeys if watch to ensure live edit
+      if (this.options.watch) {
+        this.withoutKeys = this.withoutKeys.filter(key => !['path', 'extension'].includes(key))
+      }
       // Map data and returns object picked by keys
       const fn = data => data.map(item => omit(item, this.withoutKeys))
       // Apply pick during postprocess
