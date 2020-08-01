@@ -54,7 +54,10 @@
 
   /* CODE BLOCKS */
   & > .nuxt-content-highlight {
-    @apply text-base;
+    @apply text-base relative;
+    & > .filename {
+      @apply absolute right-0 top-0 font-mono text-sm text-gray-400 select-none mr-1;
+    }
   }
 
   /* LISTS */

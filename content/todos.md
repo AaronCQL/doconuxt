@@ -31,7 +31,7 @@ title: TODOs
 - [ ] Code block
   - [ ] Include way to copy code block
   - [ ] Add line highlighting
-  - [ ] Style filename properly
+  - [x] Style filename properly
 - [ ] Style checkbox properly
   
 ## Future

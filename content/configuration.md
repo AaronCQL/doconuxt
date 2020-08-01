@@ -29,7 +29,7 @@ Uses `@fortawesome/fontawesome-svg-core`, `@fortawesome/free-solid-svg-icons`, a
 
 Within `~/plugins/fontawesome.js`, import the icons and add to the `library` before using it in any vue file:
 
-```jsx
+```jsx[*.vue]
 <font-awesome-icon icon="moon" />
 ```
 
@@ -50,7 +50,7 @@ Uses [`prism-themes`](https://www.npmjs.com/package/prism-themes).
 
 To change themes, in `nuxt.config.js`:
 
-```js{1,3-5}[server.js]
+```js{1,3-5}[nuxt.config.js]
 content: {
   markdown: {
     prism: {
