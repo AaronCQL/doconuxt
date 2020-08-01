@@ -50,7 +50,7 @@ Uses [`prism-themes`](https://www.npmjs.com/package/prism-themes).
 
 To change themes, in `nuxt.config.js`:
 
-```js
+```js{1,3-5}[server.js]
 content: {
   markdown: {
     prism: {
