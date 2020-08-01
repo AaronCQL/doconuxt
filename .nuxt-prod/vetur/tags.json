@@ -1,9 +1,9 @@
 {
-  "Logo": {
-    "description": "Auto imported from components/Logo.vue"
+  "Alert": {
+    "description": "Auto imported from components/global/Alert.vue"
   },
-  "LazyLogo": {
-    "description": "Auto imported from components/Logo.vue"
+  "LazyAlert": {
+    "description": "Auto imported from components/global/Alert.vue"
   },
   "ThemeSwitcher": {
     "description": "Auto imported from components/ThemeSwitcher.vue"
