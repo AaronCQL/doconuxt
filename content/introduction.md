@@ -94,14 +94,18 @@ $$
 
 This is an `info` block.
 
-```js
-const world = "world";
-console.log(`hello ${world}!`);
+```md{}[*.md]
+<!-- title is false by default -->
+<alert type="info">
+
+This is an `info` block.
+
+</alert>
 ```
 
 </alert>
 
-<alert type="warning">
+<alert type="warning" :title=true>
 
 First `p` child.
 
@@ -115,9 +119,17 @@ $$
 
 </alert>
 
-<alert type="danger">
+<alert type="danger" title="My Custom Title">
 
-danger `danger`
+This is a `danger` block with a custom title.
+
+```md{}[*.md]
+<alert type="danger" title="My Custom Title">
+
+This is a `danger` block with a custom title.
+
+</alert>
+```
 
 </alert>
 
