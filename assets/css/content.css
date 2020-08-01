@@ -1,9 +1,7 @@
 .nuxt-content {
   @apply px-4 max-w-3xl mx-auto;
-}
 
-/* HEADERS */
-.nuxt-content {
+  /* HEADERS & PARAGRAPHS */
   & h1,
   & h2,
   & h3,
@@ -11,104 +9,88 @@
   & h5,
   & h6 {
     @apply mt-6 mb-4;
-
-    /* ensure hash link does not head butt the header */
-    &::before {
+    /* put some top margins to account for fixed nav header */
+    &:before {
       @apply block invisible pointer-events-none -mt-20 h-20;
       content: " ";
     }
   }
-}
-
-.nuxt-content h1 {
-  @apply text-4xl font-extrabold border-b;
-  border-color: var(--border-secondary);
-}
-
-.nuxt-content h2 {
-  @apply text-3xl font-bold border-b;
-  border-color: var(--border-secondary);
-}
-
-.nuxt-content h3 {
-  @apply text-2xl font-bold;
-}
-
-.nuxt-content h4 {
-  @apply text-xl font-bold;
-}
-
-.nuxt-content p {
-  @apply my-4;
-}
-
-.nuxt-content strong {
-  @apply font-semibold;
-}
-
-/* LINKS */
-.nuxt-content :not(h1, h2, h3, h4, h5, h6) > a {
-  &:hover {
-    @apply underline;
+  & h1 {
+    @apply text-4xl font-extrabold border-b;
+    border-color: var(--border-secondary);
   }
-  @apply font-semibold break-words;
-  color: var(--primary);
-}
+  & h2 {
+    @apply text-3xl font-bold border-b;
+    border-color: var(--border-secondary);
+  }
+  & h3 {
+    @apply text-2xl font-bold;
+  }
+  & h4 {
+    @apply text-xl font-bold;
+  }
+  & p {
+    @apply my-4;
+  }
+  & strong {
+    @apply font-semibold;
+  }
 
-/* INLINE CODE */
-.nuxt-content {
+  /* LINKS */
+  & :not(h1, h2, h3, h4, h5, h6) > a {
+    &:hover {
+      @apply underline;
+    }
+    @apply font-semibold break-words;
+    color: var(--primary);
+  }
+
+  /* INLINE CODE */
   & :not(pre) > code {
     @apply rounded select-all;
     padding: 0.1em 0.2em;
     background-color: var(--bg-secondary);
   }
-}
 
-/* CODE BLOCKS */
-.nuxt-content > .nuxt-content-highlight {
-  @apply text-base;
-}
+  /* CODE BLOCKS */
+  & > .nuxt-content-highlight {
+    @apply text-base;
+  }
 
-/* LISTS */
-.nuxt-content {
+  /* LISTS */
   & > ul,
   & > ol {
     /* overall margins of one list block */
     @apply mb-4;
   }
-}
-
-.nuxt-content ul {
-  @apply list-disc list-outside;
-}
-
-.nuxt-content ol {
-  @apply list-decimal list-outside;
-}
-
-.nuxt-content li {
-  @apply ml-5 pl-1 my-1;
-}
-
-/* CHECKBOX */
-.nuxt-content .task-list-item {
-  @apply list-none;
-  & input {
-    @apply float-left;
-    margin-left: -1.3em;
-    margin-top: 0.35em;
+  & ul {
+    @apply list-disc list-outside;
   }
-}
+  & ol {
+    @apply list-decimal list-outside;
+  }
+  & li {
+    @apply ml-5 pl-1 my-1;
+  }
 
-/* BLOCK QUOTE */
-.nuxt-content blockquote {
-  @apply border-l-4 pl-2;
-  border-color: var(--border);
-  color: var(--text-secondary);
-}
+  /* CHECKBOX */
+  & .task-list-item {
+    @apply list-none;
+    & input {
+      @apply float-left;
+      margin-left: -1.3em;
+      margin-top: 0.35em;
+    }
+  }
 
-/* TABLES */
-.nuxt-content {
+  /* BLOCK QUOTE */
+  & blockquote {
+    @apply border-l-4 pl-2;
+    border-color: var(--border);
+    color: var(--text-secondary);
+  }
+
+  /* TABLES */
   & table {
     @apply border-collapse overflow-auto;
   }
