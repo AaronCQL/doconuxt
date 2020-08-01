@@ -36,6 +36,6 @@ title: TODOs
   
 ## Future
 
-- [ ] [Custom blocks](https://content.nuxtjs.org/configuration#markdownremarkplugins) (like HackMD), eg. `info`, `warning`, `danger`
+- [x] [Custom blocks](https://content.nuxtjs.org/configuration#markdownremarkplugins) (like HackMD), eg. `info`, `warning`, `danger`
 - [ ] Developer and user guide
 - [ ] Landing page?

@@ -10,3 +10,8 @@ see: https://github.com/KaTeX/KaTeX/issues/2236
   /* use primary text colour */
   border-color: var(--text);
 }
+
+/* override inherited background-color from theme.css */
+div.math {
+  @apply bg-transparent;
+}
