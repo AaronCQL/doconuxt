@@ -1,3 +1,5 @@
+import path from "path";
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -9,6 +11,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: "static",
+  srcDir: __dirname,
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -52,6 +55,17 @@ export default {
    ** See https://nuxtjs.org/api/configuration-components
    */
   components: true,
+  hooks: {
+    "modules:before": ({ nuxt }) => {
+      // Configure @nuxt/content dir
+      nuxt.options.content.dir = path.resolve(
+        nuxt.options.rootDir,
+        nuxt.options.content.dir || "content"
+      );
+      // Configure static dir
+      nuxt.options.dir.static = path.resolve(nuxt.options.rootDir, "static");
+    },
+  },
   /*
    ** Nuxt.js dev-modules
    */
@@ -67,16 +81,9 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios",
     // Doc: https://github.com/nuxt/content
     "@nuxt/content",
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
