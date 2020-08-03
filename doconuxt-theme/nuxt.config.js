@@ -57,13 +57,21 @@ export default {
   components: true,
   hooks: {
     "modules:before": ({ nuxt }) => {
-      // Configure @nuxt/content dir
+      // configure content dir
       nuxt.options.content.dir = path.resolve(
         nuxt.options.rootDir,
         nuxt.options.content.dir || "content"
       );
-      // Configure static dir
+      // configure static dir
       nuxt.options.dir.static = path.resolve(nuxt.options.rootDir, "static");
+      // configure components dir
+      // see: https://github.com/nuxt/components#library-authors
+      nuxt.hook("components:dirs", (dirs) => {
+        dirs.push({
+          path: path.resolve(nuxt.options.rootDir, "components/global"),
+          global: true,
+        });
+      });
     },
   },
   /*
