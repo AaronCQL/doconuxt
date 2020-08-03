@@ -1,10 +1,17 @@
 ---
-title: TODOs
+title: Roadmap
 ---
 
-# Feature TODOs
+# Roadmap
 
-## Necessary
+## Goals
+
+- Plug and play solution for creating documentation in markdown
+  - With possible option to eject the theme and customise
+- Opinionated but as customisable as is needed
+- Contains commonly used components
+
+## Todos
 
 ### Major
 
@@ -12,8 +19,9 @@ title: TODOs
 - [x] Themes with [Nuxt color mode](https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/)
 - [x] Prism themes for code syntax highlighting
 - [x] Rework main layout?
-- [ ] Side navbar functionality (how to arrange pages?)
+- [ ] VuePress like directory structure and behaviour for `content`
 - [ ] Locale/language picker for i18n support
+- [ ] Options merging with user defined configurations in `nuxt.config.js`
 
 ### Minor
 
@@ -24,18 +32,23 @@ title: TODOs
 - [x] Scroll to header anchor functionality
   - [x] Properly offset and scroll to element
 - [x] In `default` layout, use Vuex and `nuxtServerInit` to get `content` changes to [support Dev mode hot reload](https://content.nuxtjs.org/advanced#handling-hot-reload)
-- [ ] Use `yaml` title instead of `H1` tag in markdown
 - [ ] Test out full suite of markdown styles
 - [ ] [Search functionality](https://content.nuxtjs.org/examples#search)
 - [ ] Table of contents for current page
 - [ ] Code block
+  - [x] Style filename properly
   - [ ] Include way to copy code block
   - [ ] Add line highlighting
-  - [x] Style filename properly
 - [ ] Style checkbox properly
-  
-## Future
 
-- [x] [Custom blocks](https://content.nuxtjs.org/configuration#markdownremarkplugins) (like HackMD), eg. `info`, `warning`, `danger`
+### Components
+
+- [x] Custom alert blocks
+- [ ] Directory structure tree
+- [ ] Spoiler block
+- [ ] Panel block (for different code languages)
+
+### Future
+
 - [ ] Developer and user guide
-- [ ] Landing page?
+- [ ] Landing page
