@@ -1,0 +1,21 @@
+{
+  "name": "doconuxt-theme",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "nuxt.config.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
+    "@nuxt/content": "^1.5.0",
+    "@nuxtjs/color-mode": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^2.0.0",
+    "katex": "^0.12.0",
+    "prism-themes": "^1.4.0",
+    "rehype-katex": "^3.1.0",
+    "remark-math": "^2.0.1"
+  },
+  "devDependencies": {
+    "nuxt": "^2.14.0"
+  }
+}
