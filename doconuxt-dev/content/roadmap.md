@@ -40,6 +40,7 @@ title: Roadmap
   - [ ] Include way to copy code block
   - [ ] Add line highlighting
 - [ ] Style checkbox properly
+- [ ] Handle and style 404 not found errors
 
 ### Components
 
