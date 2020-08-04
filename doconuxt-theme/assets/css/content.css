@@ -5,10 +5,13 @@
   & h1,
   & h2,
   & h3,
-  & h4,
-  & h5,
-  & h6 {
-    @apply mt-6 mb-4;
+  & h4 {
+    @apply mt-8 mb-4;
+    & + h2,
+    & + h3,
+    & + h4 {
+      @apply mt-4;
+    }
     /* put some top margins to account for fixed nav header */
     &:before {
       @apply block invisible pointer-events-none -mt-20 h-20;
@@ -27,7 +30,7 @@
     @apply text-2xl font-bold;
   }
   & h4 {
-    @apply text-xl font-bold;
+    @apply text-xl font-semibold;
   }
   & p {
     @apply my-4;
