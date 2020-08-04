@@ -31,21 +31,29 @@
     <main class="pt-16">
       <nav
         style="border-color: var(--border);"
-        class="z-40 h-full flex-col fixed w-64 overflow-y-auto border-r p-2 space-y-1"
+        class="z-40 h-full flex-col fixed w-72 overflow-y-auto border-r p-3 space-y-6"
         :class="isNavOpen ? 'flex' : 'hidden md:flex'"
       >
-        <nuxt-link
-          v-for="link in navLinks"
-          :key="link.title"
-          class="cursor-pointer text-lg font-semibold hover:text-primary w-full link-active"
-          :to="link.path"
-          @click.native="closeNav"
-        >
-          {{ link.title }}
-        </nuxt-link>
+        <div v-for="(linkGroup, idx) in navLinks" :key="idx">
+          <h1
+            v-if="linkGroup.category"
+            class="opacity-50 uppercase tracking-wider"
+          >
+            {{ linkGroup.category }}
+          </h1>
+          <nuxt-link
+            v-for="link in linkGroup.links"
+            :key="link.path"
+            class="block px-2 py-1 leading-relaxed font-semibold cursor-pointer hover:text-primary w-full link-active truncate"
+            :to="link.path"
+            @click.native="closeNav"
+          >
+            {{ link.title }}
+          </nuxt-link>
+        </div>
       </nav>
 
-      <Nuxt class="md:pl-64" />
+      <Nuxt class="md:pl-72" />
     </main>
   </div>
 </template>
@@ -75,6 +83,7 @@ export default {
 
 <style lang="postcss">
 .link-active.nuxt-link-active {
-  @apply text-primary;
+  /* // TODO: remove hard-coded bg-green-400 class */
+  @apply text-primary bg-green-400 bg-opacity-10 rounded;
 }
 </style>

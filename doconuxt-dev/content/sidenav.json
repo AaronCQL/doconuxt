@@ -1,0 +1,17 @@
+[
+  {
+    "category": "Getting Started",
+    "links": [
+      { "path": "/introduction", "title": "Introduction" },
+      { "path": "/nuxt-content", "title": "@nuxt/content" }
+    ]
+  },
+  {
+    "category": "Developer Notes",
+    "links": [
+      { "path": "/roadmap", "title": "Roadmap" },
+      { "path": "/configuration", "title": "Configuration" },
+      { "path": "/deploying", "title": "Deploying" }
+    ]
+  }
+]

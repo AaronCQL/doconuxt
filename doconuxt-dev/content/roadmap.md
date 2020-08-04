@@ -41,7 +41,8 @@ title: Roadmap
   - [ ] Add line highlighting
 - [ ] Style checkbox properly
 - [ ] Handle and style 404 not found errors
-- [ ] User customisable top nav and side nav
+- [x] User customisable side nav
+- [ ] User customisable top nav
 
 ### Components
 
