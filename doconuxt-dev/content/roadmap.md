@@ -19,7 +19,7 @@ title: Roadmap
 - [x] Themes with [Nuxt color mode](https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/)
 - [x] Prism themes for code syntax highlighting
 - [x] Rework main layout?
-- [ ] VuePress like directory structure and behaviour for `content`
+- [x] VuePress like directory structure and behaviour for `content`
 - [ ] Locale/language picker for i18n support
 - [ ] Options merging with user defined configurations in `nuxt.config.js`
 
@@ -41,6 +41,7 @@ title: Roadmap
   - [ ] Add line highlighting
 - [ ] Style checkbox properly
 - [ ] Handle and style 404 not found errors
+- [ ] User customisable top nav and side nav
 
 ### Components
 
