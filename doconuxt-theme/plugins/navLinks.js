@@ -9,7 +9,7 @@ export default async function ({ store }) {
     await store.dispatch("fetchNavLinks");
   }
 
-  // for dev HMR
+  // for development HMR
   if (process.client && process.dev) {
     window.onNuxtReady(() => {
       window.$nuxt.$on("content:update", () => store.dispatch("fetchNavLinks"));
