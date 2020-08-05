@@ -15,21 +15,28 @@ export default {
     }
   },
   async asyncData({ $content, params, error }) {
-    let content = await $content(params.pathMatch).fetch();
+    try {
+      let content = await $content(params.pathMatch).fetch();
 
-    if (Array.isArray(content)) {
-      // params.pathMatch is a directory in content
-      // try to find the index page
-      content = content.find((page) => page.slug === "index");
+      if (Array.isArray(content)) {
+        // params.pathMatch is a directory in content
+        // try to find the index page
+        content = content.find((page) => page.slug === "index");
+      }
+
+      if (!content) {
+        // page is not found; throw error
+        throw new Error(`${params.pathMatch} not found`);
+      }
+
+      return {
+        content,
+      };
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error(err);
+      return error({ statusCode: 404, message: "Page not found" });
     }
-
-    if (!content) {
-      return error({ statusCode: 404, message: "Not Found" });
-    }
-
-    return {
-      content,
-    };
   },
 };
 </script>

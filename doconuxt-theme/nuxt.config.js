@@ -49,7 +49,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ["@/plugins/navLinks.js", "@plugins/fontawesome.js"],
+  plugins: ["@/plugins/navLinks", "@plugins/fontawesome"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -92,6 +92,21 @@ export default {
     // Doc: https://github.com/nuxt/content
     "@nuxt/content",
   ],
+  generate: {
+    fallback: "404.html",
+    async routes() {
+      const { $content } = require("@nuxt/content");
+      const files = await $content()
+        .only(["path"])
+        .where({ path: { $ne: "/sidenav" } }) // exclude the sidenav.json config
+        .fetch();
+
+      return files.map((file) => {
+        const trailingIndexRegex = /\/index\/?$/;
+        return file.path.replace(trailingIndexRegex, "") || "/";
+      });
+    },
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
