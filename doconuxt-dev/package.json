@@ -11,7 +11,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "doconuxt-theme": "^0.1.0",
+    "doconuxt-theme": "^0.0.1",
     "nuxt": "^2.14.0"
   }
 }
