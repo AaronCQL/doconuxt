@@ -11,7 +11,8 @@
     "links": [
       { "path": "/roadmap", "title": "Roadmap" },
       { "path": "/configuration", "title": "Configuration" },
-      { "path": "/deploying", "title": "Deploying" }
+      { "path": "/deploying", "title": "Deploying" },
+      { "path": "/notes", "title": "Notes" }
     ]
   }
 ]
