@@ -60,7 +60,7 @@ export default {
       const { $content } = require("@nuxt/content");
       const files = await $content()
         .only(["path"])
-        .where({ path: { $ne: "/sidenav" } }) // exclude the sidenav.json config
+        .where({ dir: { $ne: "/_config" } }) // exclude the /_config folder
         .fetch();
 
       return files.map((file) => {

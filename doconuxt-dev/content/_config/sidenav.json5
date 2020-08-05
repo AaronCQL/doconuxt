@@ -1,8 +1,12 @@
 [
   {
-    "category": "Getting Started",
+    "category": "Getting Started", // optional; defaults to false
+    "prefixPath": "", // optional; defaults to ""
     "links": [
-      { "path": "/introduction", "title": "Introduction" },
+      { 
+        "path": "/introduction", // required
+        "title": "Introduction"  // optional; defaults to yaml title
+      },
       { "path": "/nuxt-content", "title": "@nuxt/content" }
     ]
   },

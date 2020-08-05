@@ -11,7 +11,7 @@ export const mutations = {
 // TODO: add error checking and validation
 export const actions = {
   async fetchNavLinks({ commit }) {
-    const sidenav = await this.$content("sidenav").fetch();
+    const sidenav = await this.$content("_config/sidenav").fetch();
     const navLinks = [];
     for (const [idx, linkGroup] of Object.entries(sidenav)) {
       if (isNaN(parseInt(idx))) {
