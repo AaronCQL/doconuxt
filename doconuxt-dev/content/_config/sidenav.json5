@@ -5,7 +5,8 @@
     "links": [
       { 
         "path": "/introduction", // required
-        "title": "Introduction"  // optional; defaults to yaml title
+        "title": "Introduction", // optional; when set will be used for sidenav and pagination; defaults to yaml title
+        "toc": 3                 // optional; defaults to 3
       },
       { "path": "/nuxt-content", "title": "@nuxt/content" }
     ]
