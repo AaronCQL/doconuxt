@@ -1,0 +1,5 @@
+const USER_CONFIG_DIR = "/_config";
+
+const SIDENAV_CONFIG_PATH = USER_CONFIG_DIR + "/sidenav";
+
+export { USER_CONFIG_DIR, SIDENAV_CONFIG_PATH };

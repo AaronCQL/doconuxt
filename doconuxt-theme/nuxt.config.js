@@ -1,5 +1,8 @@
 import path from "path";
 
+import { getPathWithoutTrailingIndex } from "./utils/pathUtils";
+import { USER_CONFIG_DIR } from "./utils/constants";
+
 export default {
   mode: "universal",
   target: "static",
@@ -60,13 +63,10 @@ export default {
       const { $content } = require("@nuxt/content");
       const files = await $content()
         .only(["path"])
-        .where({ dir: { $ne: "/_config" } }) // exclude the /_config folder
+        .where({ dir: { $ne: USER_CONFIG_DIR } }) // exclude the user config folder
         .fetch();
 
-      return files.map((file) => {
-        const trailingIndexRegex = /\/index\/?$/;
-        return file.path.replace(trailingIndexRegex, "") || "/";
-      });
+      return files.map((file) => getPathWithoutTrailingIndex(file.path));
     },
   },
   content: {

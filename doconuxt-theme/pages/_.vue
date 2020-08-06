@@ -5,13 +5,17 @@
 </template>
 
 <script>
+import {
+  hasTrailingIndex,
+  getPathWithoutTrailingIndex,
+} from "../utils/pathUtils";
+
 export default {
   middleware({ params, redirect }) {
     // redirects all url with trailing `xxx/index` or `xxx/index/` to `xxx`
     const path = "/" + params.pathMatch; // concat `/` prefix to handle root index page
-    const trailingIndexRegex = /\/index\/?$/;
-    if (path.match(trailingIndexRegex)) {
-      redirect(path.replace(trailingIndexRegex, "") || "/");
+    if (hasTrailingIndex(path)) {
+      redirect(getPathWithoutTrailingIndex(path));
     }
   },
   async asyncData({ $content, params, error }) {
@@ -21,7 +25,7 @@ export default {
       if (Array.isArray(content)) {
         // params.pathMatch is a directory in content
         // try to find the index page
-        content = content.find((page) => page.slug === "index");
+        content = content.find((page) => hasTrailingIndex(page.path));
       }
 
       if (!content) {
