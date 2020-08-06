@@ -34,7 +34,7 @@
         class="z-40 h-full flex-col fixed w-72 overflow-y-auto border-r p-3 space-y-6"
         :class="isNavOpen ? 'flex' : 'hidden md:flex'"
       >
-        <div v-for="(linkGroup, idx) in navLinks" :key="idx">
+        <div v-for="(linkGroup, idx) in linkGroups" :key="idx">
           <h1
             v-if="linkGroup.category"
             class="opacity-50 uppercase tracking-wider"
@@ -66,8 +66,8 @@ export default {
     };
   },
   computed: {
-    navLinks() {
-      return this.$store.state.navLinks;
+    linkGroups() {
+      return this.$store.state.sidenav.linkGroups;
     },
   },
   methods: {

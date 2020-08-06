@@ -30,7 +30,7 @@ export default {
     // prevent purge of fontawesome css
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
-  plugins: ["@/plugins/navLinks", "@plugins/fontawesome"],
+  plugins: ["@/plugins/sidenav", "@plugins/fontawesome"],
   components: true,
   hooks: {
     "modules:before": ({ nuxt }) => {
