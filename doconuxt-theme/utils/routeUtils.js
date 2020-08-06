@@ -11,6 +11,16 @@ function getPrefixedRoute(route) {
 }
 
 /**
+ * Checks and returns a route guaranteed to not have the `/` prefix
+ *
+ * @param {string} route the route to check and correct
+ * @returns {string} a new route guaranteed to not have the `/` prefix
+ */
+function getNonPrefixedRoute(route) {
+  return route.charAt(0) === "/" ? route.substring(1) : route;
+}
+
+/**
  * Return true iff `route` has a trailing `/index` or `/index/`.
  *
  * @param {string} route the route string to test
@@ -46,6 +56,7 @@ function getRouteWithoutTrailingIndex(route) {
 
 export {
   TRAILING_INDEX_REGEX,
+  getNonPrefixedRoute,
   isTrailingIndexRoute,
   getRouteWithoutTrailingIndex,
 };
