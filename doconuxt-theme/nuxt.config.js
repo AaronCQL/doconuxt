@@ -1,6 +1,6 @@
 import path from "path";
 
-import { getPathWithoutTrailingIndex } from "./utils/pathUtils";
+import { getRouteWithoutTrailingIndex } from "./utils/routeUtils";
 import { USER_CONFIG_DIR } from "./utils/constants";
 
 export default {
@@ -30,7 +30,11 @@ export default {
     // prevent purge of fontawesome css
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
-  plugins: ["@/plugins/sidenav", "@plugins/fontawesome"],
+  plugins: [
+    "@/plugins/sidenav",
+    "@/plugins/indexRouteRedirect",
+    "@/plugins/fontawesome",
+  ],
   components: true,
   hooks: {
     "modules:before": ({ nuxt }) => {
@@ -66,7 +70,7 @@ export default {
         .where({ dir: { $ne: USER_CONFIG_DIR } }) // exclude the user config folder
         .fetch();
 
-      return files.map((file) => getPathWithoutTrailingIndex(file.path));
+      return files.map((file) => getRouteWithoutTrailingIndex(file.path));
     },
   },
   content: {
