@@ -30,7 +30,7 @@ function hasTrailingIndex(path) {
  * Returns a new path with the `/` prefix, and without the trailing `/index`.
  *
  * @param {string} path the base path string
- * @returns {string} a new string without the trailing `/index`
+ * @returns {string} a new path with the `/` prefix, and without the trailing `/index`
  */
 function getPathWithoutTrailingIndex(path) {
   if (typeof path !== "string") {

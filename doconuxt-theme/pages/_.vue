@@ -13,9 +13,8 @@ import {
 export default {
   middleware({ params, redirect }) {
     // redirects all url with trailing `xxx/index` or `xxx/index/` to `xxx`
-    const path = "/" + params.pathMatch; // concat `/` prefix to handle root index page
-    if (hasTrailingIndex(path)) {
-      redirect(getPathWithoutTrailingIndex(path));
+    if (hasTrailingIndex(params.pathMatch)) {
+      redirect(getPathWithoutTrailingIndex(params.pathMatch));
     }
   },
   async asyncData({ $content, params, error }) {
