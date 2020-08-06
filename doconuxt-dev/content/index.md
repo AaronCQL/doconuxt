@@ -1,4 +1,6 @@
-# Index Page
+---
+title: Index Page
+---
 
 Hello.
 

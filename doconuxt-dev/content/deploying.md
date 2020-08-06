@@ -2,8 +2,6 @@
 title: Deploying
 ---
 
-# Deploying
-
 This website can be easily hosted via a static site hosting service like Netlify or Vercel. A fully static Nuxt site can be [split into two different steps](https://nuxtjs.org/blog/going-full-static/#new-command-code-nuxt-export-code-): the build step (`nuxt build`), followed by the export step (`nuxt export`). As such, there are two different ways we can configure Netlify/Vercel for continuous deployment:
 
 1. Skip the build step, and only run the export step (**default**)

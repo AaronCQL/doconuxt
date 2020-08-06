@@ -1,4 +1,6 @@
-# Notes
+---
+title: Notes
+---
 
 Notes pertaining to the development of the `doconuxt-theme` package.
 

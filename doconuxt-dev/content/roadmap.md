@@ -2,8 +2,6 @@
 title: Roadmap
 ---
 
-# Roadmap
-
 ## Goals
 
 - Plug and play solution for creating documentation in markdown

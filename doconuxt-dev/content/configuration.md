@@ -2,8 +2,6 @@
 title: Configuration
 ---
 
-# Configuration
-
 ## Content
 
 Uses `@nuxt/content`.
