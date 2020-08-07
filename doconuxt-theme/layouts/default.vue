@@ -31,25 +31,39 @@
     <main class="pt-16">
       <nav
         style="border-color: var(--border);"
-        class="z-40 h-full flex-col fixed w-72 overflow-y-auto border-r p-3 space-y-6"
+        class="z-40 nav-height flex-col fixed w-72 overflow-y-auto border-r p-4 space-y-8"
         :class="isNavOpen ? 'flex' : 'hidden md:flex'"
       >
-        <div v-for="(linkGroup, idx) in linkGroups" :key="idx">
+        <div
+          v-for="(linkGroup, idx) in linkGroups"
+          :key="idx"
+          class="space-y-1"
+        >
           <h1
             v-if="linkGroup.category"
-            class="opacity-50 uppercase tracking-wider"
+            class="uppercase tracking-wider opacity-50 text-sm"
           >
             {{ linkGroup.category }}
           </h1>
-          <nuxt-link
-            v-for="link in linkGroup.links"
-            :key="link.path"
-            class="block px-2 py-1 leading-relaxed font-semibold cursor-pointer hover:text-primary w-full link-active truncate"
-            :to="link.path"
-            @click.native="closeNav"
-          >
-            {{ link.title }}
-          </nuxt-link>
+          <div v-for="link in linkGroup.links" :key="link.path">
+            <nuxt-link
+              class="block text-lg cursor-pointer hover:text-primary w-full link-active truncate"
+              :to="link.path"
+              @click.native="closeNav"
+            >
+              {{ link.title }}
+            </nuxt-link>
+            <nuxt-link
+              v-for="tocLink of link.toc"
+              v-show="link.path === currentPath"
+              :key="tocLink.id"
+              class="block hover:text-primary opacity-75 mt-1"
+              :class="tocLink.depth === 2 ? 'pl-4' : 'pl-8'"
+              :to="`${link.path}#${tocLink.id}`"
+            >
+              {{ tocLink.text }}
+            </nuxt-link>
+          </div>
         </div>
       </nav>
 
@@ -67,7 +81,10 @@ export default {
   },
   computed: {
     linkGroups() {
-      return this.$store.state.sidenav.linkGroups;
+      return this.$store.state.navigation.linkGroups;
+    },
+    currentPath() {
+      return this.$route.path;
     },
   },
   methods: {
@@ -83,7 +100,10 @@ export default {
 
 <style lang="postcss">
 .link-active.nuxt-link-active {
-  /* // TODO: remove hard-coded bg-green-400 class */
-  @apply text-primary bg-green-400 bg-opacity-10 rounded;
+  @apply text-primary font-semibold;
+}
+
+.nav-height {
+  height: calc(100% - 4rem);
 }
 </style>

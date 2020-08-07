@@ -1,0 +1,39 @@
+{
+  "topnav": [],
+  "sidenav": [
+    {
+      "category": "Getting Started", // optional; defaults to false
+      "matchPath": "/getting-started/*", // optional; show this category if route matches matchPath, defaults to always show
+      "links": [
+        {
+          "path": "/introduction", // required
+          "title": "Introduction", // optional; when set will be used for sidenav and pagination; defaults to yaml title
+          "toc": 3, // optional; defaults to 2
+          "showToc": true // optional; defaults to true
+        },
+        {
+          "path": "/nuxt-content",
+          "title": "Nuxt Content"
+        }
+      ]
+    },
+    {
+      "category": "Developer Notes",
+      "links": [
+        {
+          "path": "/roadmap"
+        },
+        {
+          "path": "/configuration"
+        },
+        {
+          "path": "/deploying",
+          "toc": 3
+        },
+        {
+          "path": "/notes"
+        }
+      ]
+    }
+  ]
+}
