@@ -1,6 +1,18 @@
 <template>
   <article>
     <nuxt-content ref="nuxt-content" :document="content" />
+    <footer class="nuxt-content flex justify-between items-center h-16">
+      <div>
+        <nuxt-link v-if="prev" :to="prev.path">
+          &larr; {{ prev.title }}
+        </nuxt-link>
+      </div>
+      <div>
+        <nuxt-link v-if="next" :to="next.path">
+          {{ next.title }} &rarr;
+        </nuxt-link>
+      </div>
+    </footer>
   </article>
 </template>
 
@@ -26,7 +38,7 @@ function prependContentTitle({ body, title }) {
 }
 
 export default {
-  async asyncData({ $content, params, error }) {
+  async asyncData({ $content, params, error, store }) {
     try {
       let content = await $content(params.pathMatch).fetch();
 
@@ -49,8 +61,18 @@ export default {
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error(err);
-      return error({ statusCode: 404, message: "Page not found" });
+      return error({ statusCode: 404, message: err.message });
     }
+  },
+  computed: {
+    prev() {
+      return this.$store.state.navigation.routeInformation[this.$route.path]
+        ?.prev;
+    },
+    next() {
+      return this.$store.state.navigation.routeInformation[this.$route.path]
+        ?.next;
+    },
   },
 };
 </script>
