@@ -54,9 +54,21 @@ function getRouteWithoutTrailingIndex(route) {
   return getPrefixedRoute(withoutTrailingIndex);
 }
 
+function slugToTitleCase(slug) {
+  if (typeof slug !== "string") {
+    throw new TypeError("Argument route is not of type string");
+  }
+
+  return slug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
+    .join(" ");
+}
+
 export {
   TRAILING_INDEX_REGEX,
   getNonPrefixedRoute,
   isTrailingIndexRoute,
   getRouteWithoutTrailingIndex,
+  slugToTitleCase,
 };

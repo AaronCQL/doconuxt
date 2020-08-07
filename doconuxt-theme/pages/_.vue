@@ -19,24 +19,6 @@
 <script>
 import { isTrailingIndexRoute } from "../utils/routeUtils";
 
-/**
- * Manually prepends the yaml title as an H1 element.
- */
-function prependContentTitle({ body, title }) {
-  const h1Child = {
-    type: "element",
-    tag: "h1",
-    props: {},
-    children: [
-      {
-        type: "text",
-        value: title,
-      },
-    ],
-  };
-  body.children.unshift(h1Child);
-}
-
 export default {
   async asyncData({ $content, params, error, store }) {
     try {
@@ -52,8 +34,6 @@ export default {
         // page is not found; throw error
         throw new Error(`${params.pathMatch} not found`);
       }
-
-      prependContentTitle(content);
 
       return {
         content,

@@ -1,5 +1,5 @@
 import { NAVIGATION_CONFIG_PATH } from "../utils/constants";
-import { getNonPrefixedRoute } from "../utils/routeUtils";
+import { getNonPrefixedRoute, slugToTitleCase } from "../utils/routeUtils";
 
 export const state = () => ({
   linkGroups: [], // to generate sidebar links
@@ -19,10 +19,8 @@ async function getLinkGroups($content, linkGroups) {
   for (const { links } of linkGroups) {
     for (const link of links) {
       const path = getNonPrefixedRoute(link.path);
-      const { title, toc } = await $content(path)
-        .only(["title", "toc"])
-        .fetch();
-      link.title = link.title || title;
+      const { slug, toc } = await $content(path).only(["slug", "toc"]).fetch();
+      link.title = link.title || slugToTitleCase(slug);
       link.toc = toc.filter((data) => data.depth <= (link.toc ?? 2));
     }
   }

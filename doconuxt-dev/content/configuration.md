@@ -1,6 +1,4 @@
----
-title: Configuration
----
+# Configuration
 
 ## Content
 
