@@ -32,7 +32,7 @@ export default {
   },
   plugins: [
     "@/plugins/main",
-    "@/plugins/indexRouteRedirect",
+    "@/plugins/routeHandler",
     "@/plugins/fontawesome",
   ],
   components: true,
