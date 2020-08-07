@@ -37,6 +37,20 @@ function isTrailingIndexRoute(route) {
 }
 
 /**
+ * Return true iff `route` has a trailing `/`.
+ *
+ * @param {string} route the route string to test
+ * @returns {boolean} true iff `route` has a trailing `/`
+ */
+function isTrailingSlashRoute(route) {
+  if (typeof route !== "string") {
+    throw new TypeError("Argument route is not of type string");
+  }
+
+  return route.slice(-1) === "/";
+}
+
+/**
  * Returns a new route with the `/` prefix, and without the trailing `/index`.
  *
  * @param {string} route the base route string
@@ -54,6 +68,25 @@ function getRouteWithoutTrailingIndex(route) {
   return getPrefixedRoute(withoutTrailingIndex);
 }
 
+/**
+ * Returns a new route with the `/` prefix, and without the trailing `/`.
+ *
+ * @param {string} route the base route string
+ * @returns {string} a new route with the `/` prefix, and without the trailing `/`
+ */
+function getRouteWithoutTrailingSlash(route) {
+  if (typeof route !== "string") {
+    throw new TypeError("Argument route is not of type string");
+  }
+
+  return getPrefixedRoute(route.slice(0, -1));
+}
+
+/**
+ * Returns a title case version of the `slug`.
+ *
+ * @param {string} slug the slug to transform
+ */
 function slugToTitleCase(slug) {
   if (typeof slug !== "string") {
     throw new TypeError("Argument route is not of type string");
@@ -70,5 +103,7 @@ export {
   getNonPrefixedRoute,
   isTrailingIndexRoute,
   getRouteWithoutTrailingIndex,
+  isTrailingSlashRoute,
+  getRouteWithoutTrailingSlash,
   slugToTitleCase,
 };
