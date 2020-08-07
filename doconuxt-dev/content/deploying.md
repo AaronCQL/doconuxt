@@ -7,7 +7,7 @@ This website can be easily hosted via a static site hosting service like Netlify
 1. Skip the build step, and only run the export step (**default**)
 2. Run both the build and the export step
 
-## 1. Skipping the build step
+## Skipping the build step
 
 This is the **default mechanism**. By skipping the build step, any changes within the `content` directory will be built as fast as possible. This helps to accrue less build time and helps to save on costs associated with Netlify/Vercel build times.
 
@@ -44,7 +44,7 @@ This assumes that for a documentation site, most of the changes that is happenin
 
 If you foresee that your site is going to have many changes within the Vue files and will not benefit from the overhead of having the developers to remember to build and push the built files, you may want to revert to running both the build and export steps within Vercel/Netlify.
 
-## 2. Running both the build and export steps
+## Running both the build and export steps
 
 ### Quick start
 

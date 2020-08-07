@@ -5,7 +5,7 @@ export default async function ({ store }) {
   }
 
   // to support client side spa
-  if (process.client && !store.state.sidenav.linkGroups.length) {
+  if (process.client && !store.state.navigation.linkGroups.length) {
     await store.dispatch("navigation/fetchNavigationData");
   }
 
