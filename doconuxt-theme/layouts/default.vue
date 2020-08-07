@@ -67,7 +67,7 @@ export default {
   },
   computed: {
     linkGroups() {
-      return this.$store.state.sidenav.linkGroups;
+      return this.$store.state.navigation.linkGroups;
     },
   },
   methods: {

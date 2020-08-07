@@ -1,31 +1,26 @@
-import { SIDENAV_CONFIG_PATH } from "../utils/constants";
+import { NAVIGATION_CONFIG_PATH } from "../utils/constants";
 import { getNonPrefixedRoute } from "../utils/routeUtils";
 
 export const state = () => ({
   linkGroups: [],
+  routeInformation: {},
 });
 
 export const mutations = {
   setLinkGroups(state, linkGroups) {
     state.linkGroups = linkGroups;
   },
+  setRouteInformation(state, routeInformation) {
+    state.routeInformation = routeInformation;
+  },
 };
 
 // TODO: add error checking and validation
 export const actions = {
-  async fetchLinkGroups({ commit }) {
-    const config = await this.$content(SIDENAV_CONFIG_PATH).fetch();
-    delete config.dir;
-    delete config.slug;
-    delete config.path;
-    delete config.extension;
-    delete config.title;
-    delete config.description;
-    delete config.createdAt;
-    delete config.updatedAt;
+  async fetchNavigationData({ commit }) {
+    const config = await this.$content(NAVIGATION_CONFIG_PATH).fetch();
 
-    // convert to array
-    const linkGroups = Object.values(config);
+    const linkGroups = config.sidenav;
 
     for (const { links } of linkGroups) {
       for (const link of links) {

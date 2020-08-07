@@ -31,7 +31,7 @@ export default {
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
   plugins: [
-    "@/plugins/sidenav",
+    "@/plugins/main",
     "@/plugins/indexRouteRedirect",
     "@/plugins/fontawesome",
   ],
