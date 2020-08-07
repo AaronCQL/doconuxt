@@ -5,14 +5,14 @@ import {
   isTrailingSlashRoute,
 } from "../utils/routeUtils";
 
-export default function ({ params, redirect }) {
+export default function ({ redirect, route }) {
   // redirects all url with trailing `xxx/index` or `xxx/index/` to `xxx`
-  if (isTrailingIndexRoute(params.pathMatch)) {
-    return redirect(getRouteWithoutTrailingIndex(params.pathMatch));
+  if (isTrailingIndexRoute(route.path)) {
+    return redirect(getRouteWithoutTrailingIndex(route.path) + route.hash);
   }
 
   // redirects all url with trailing `/` to without trailing `/`
-  if (isTrailingSlashRoute(params.pathMatch)) {
-    return redirect(getRouteWithoutTrailingSlash(params.pathMatch));
+  if (isTrailingSlashRoute(route.path)) {
+    return redirect(getRouteWithoutTrailingSlash(route.path) + route.hash);
   }
 }
