@@ -1,5 +1,4 @@
 import { NAVIGATION_CONFIG_PATH } from "../utils/constants";
-import { getNonPrefixedRoute } from "../utils/routeUtils";
 
 export const state = () => ({
   linkGroups: [], // to generate sidebar links
@@ -18,8 +17,8 @@ export const mutations = {
 async function getLinkGroups($content, linkGroups) {
   for (const { links } of linkGroups) {
     for (const link of links) {
-      const path = getNonPrefixedRoute(link.path);
-      const { title, toc } = await $content(path)
+      const [{ title, toc }] = await $content("/", { deep: true })
+        .where({ route: link.route })
         .only(["title", "toc"])
         .fetch();
       link.title = title;
@@ -32,8 +31,8 @@ async function getLinkGroups($content, linkGroups) {
 function getRouteInformation(linkGroups) {
   const links = linkGroups
     .flatMap((group) => group.links)
-    .map(({ path, title }) => {
-      return { path, title };
+    .map(({ route, title }) => {
+      return { route, title };
     });
 
   const mapping = {};
@@ -41,8 +40,8 @@ function getRouteInformation(linkGroups) {
     const prev = links[i - 1] ?? null;
     const next = links[i + 1] ?? null;
 
-    const currentPath = links[i].path;
-    mapping[currentPath] = { prev, next };
+    const currentRoute = links[i].route;
+    mapping[currentRoute] = { prev, next };
   }
 
   return mapping;

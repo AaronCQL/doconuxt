@@ -3,12 +3,12 @@
     <nuxt-content ref="nuxt-content" :document="content" />
     <footer class="nuxt-content flex justify-between items-center h-16">
       <div>
-        <nuxt-link v-if="prev" :to="prev.path">
+        <nuxt-link v-if="prev" :to="prev.route">
           &larr; {{ prev.title }}
         </nuxt-link>
       </div>
       <div>
-        <nuxt-link v-if="next" :to="next.path">
+        <nuxt-link v-if="next" :to="next.route">
           {{ next.title }} &rarr;
         </nuxt-link>
       </div>
@@ -17,32 +17,19 @@
 </template>
 
 <script>
-import { isTrailingIndexRoute } from "../utils/routeUtils";
-
 export default {
-  async asyncData({ $content, params, error, store }) {
-    try {
-      let content = await $content(params.pathMatch).fetch();
+  async asyncData({ $content, route, error }) {
+    const [content] = await $content("/", { deep: true })
+      .where({ route: route.path })
+      .fetch();
 
-      if (Array.isArray(content)) {
-        // params.pathMatch is a directory in content
-        // try to find the index page
-        content = content.find((page) => isTrailingIndexRoute(page.path));
-      }
-
-      if (!content) {
-        // page is not found; throw error
-        throw new Error(`${params.pathMatch} not found`);
-      }
-
-      return {
-        content,
-      };
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error(err);
-      return error({ statusCode: 404, message: err.message });
+    if (!content) {
+      return error({ statusCode: 404, message: "Page not found" });
     }
+
+    return {
+      content,
+    };
   },
   computed: {
     prev() {

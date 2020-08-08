@@ -45,21 +45,24 @@
           >
             {{ linkGroup.category }}
           </h1>
-          <div v-for="link in linkGroup.links" :key="link.path">
+          <div v-for="link in linkGroup.links" :key="link.route">
             <nuxt-link
-              class="block text-lg cursor-pointer hover:text-primary w-full link-active truncate"
-              :to="link.path"
+              :class="{
+                'text-primary font-semibold': link.route === currentRoute,
+              }"
+              class="block text-lg cursor-pointer hover:text-primary w-full truncate"
+              :to="link.route"
               @click.native="closeNav"
             >
               {{ link.title }}
             </nuxt-link>
             <nuxt-link
               v-for="tocLink of link.toc"
-              v-show="link.path === currentPath"
+              v-show="link.route === currentRoute"
               :key="tocLink.id"
               class="block hover:text-primary opacity-75 mt-1"
               :class="tocLink.depth === 2 ? 'pl-4' : 'pl-8'"
-              :to="`${link.path}#${tocLink.id}`"
+              :to="`${link.route}#${tocLink.id}`"
             >
               {{ tocLink.text }}
             </nuxt-link>
@@ -83,7 +86,7 @@ export default {
     linkGroups() {
       return this.$store.state.navigation.linkGroups;
     },
-    currentPath() {
+    currentRoute() {
       return this.$route.path;
     },
   },
@@ -99,10 +102,6 @@ export default {
 </script>
 
 <style lang="postcss">
-.link-active.nuxt-link-active {
-  @apply text-primary font-semibold;
-}
-
 .nav-height {
   height: calc(100% - 4rem);
 }

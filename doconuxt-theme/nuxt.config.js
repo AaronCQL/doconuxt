@@ -4,26 +4,21 @@ import { getRouteWithoutTrailingIndex } from "./utils/routeUtils";
 import { USER_CONFIG_DIR } from "./utils/constants";
 
 function inferDocumentTitle(document) {
-  const h1Regex = /^\s*#.*/m;
-  if (document.extension !== ".md") {
-    // ignore non markdown files
-    return;
-  }
   if (document.title) {
     // title is already set via yaml frontmatter
-    return;
+    return document.title;
   }
 
+  const h1Regex = /^\s*#.*/m;
   const match = document.text.match(h1Regex);
   if (!match) {
     // no h1 tag set
-    document.title = "Untitled";
-    return;
+    return "Untitled";
   }
   // infer title from first h1 tag
   const unparsedHeader = match[0].trim();
   const textRegex = /^#\s*/;
-  document.title = unparsedHeader.replace(textRegex, "") || "Untitled";
+  return unparsedHeader.replace(textRegex, "") || "Untitled";
 }
 
 export default {
@@ -77,7 +72,16 @@ export default {
         });
       });
     },
-    "content:file:beforeInsert": inferDocumentTitle,
+    "content:file:beforeInsert": (document) => {
+      if (document.extension !== ".md") {
+        // ignore non markdown files
+        return;
+      }
+      // infer document title
+      document.title = inferDocumentTitle(document);
+      // actual route seen by users
+      document.route = getRouteWithoutTrailingIndex(document.path);
+    },
   },
   buildModules: [
     "@nuxtjs/eslint-module",
