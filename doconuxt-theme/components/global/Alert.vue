@@ -49,42 +49,60 @@ export default {
 }
 
 .alert-info {
-  @apply bg-blue-100 border-blue-300 text-blue-800;
+  @apply bg-blue-100 border-blue-300 text-blue-900;
   & :not(pre) > code {
     @apply bg-blue-200 bg-opacity-75;
   }
+  & a {
+    @apply text-blue-700;
+  }
 }
 .alert-warning {
-  @apply bg-orange-100 border-yellow-500 text-yellow-800;
+  @apply bg-orange-100 border-yellow-500 text-yellow-900;
   & :not(pre) > code {
     @apply bg-orange-200 bg-opacity-75;
   }
+  & a {
+    @apply text-orange-700;
+  }
 }
 .alert-danger {
-  @apply bg-red-100 border-red-300 text-red-800;
+  @apply bg-red-100 border-red-300 text-red-900;
   & :not(pre) > code {
     @apply bg-red-200 bg-opacity-75;
+  }
+  & a {
+    @apply text-red-700;
   }
 }
 
 .dark-mode,
 .black-mode {
   & .alert-info {
-    @apply bg-blue-900 bg-opacity-75 border-blue-700 text-blue-200;
+    @apply bg-blue-900 bg-opacity-50 border-blue-700 text-blue-100;
     & :not(pre) > code {
       @apply bg-blue-700 bg-opacity-50;
     }
+    & a {
+      @apply text-blue-300;
+    }
   }
   & .alert-warning {
-    @apply bg-yellow-600 bg-opacity-25 border-yellow-700 text-orange-200;
+    @apply bg-yellow-600 bg-opacity-25 border-yellow-700 text-orange-100;
     & :not(pre) > code {
       @apply bg-yellow-800 bg-opacity-50;
     }
+    & a {
+      @apply text-orange-300;
+    }
   }
   & .alert-danger {
-    @apply bg-red-900 bg-opacity-50 border-red-700 text-red-200;
+    @apply bg-red-900 bg-opacity-50 border-red-700 text-red-100;
     & :not(pre) > code {
       @apply bg-red-800 bg-opacity-50;
+    }
+    & a {
+      @apply text-red-300;
     }
   }
 }
