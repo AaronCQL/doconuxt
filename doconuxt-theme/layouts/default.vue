@@ -56,16 +56,17 @@
             >
               {{ link.title }}
             </nuxt-link>
-            <nuxt-link
-              v-for="tocLink of link.toc"
-              v-show="link.route === currentRoute"
-              :key="tocLink.id"
-              class="block hover:text-primary opacity-75 mt-1"
-              :class="tocLink.depth === 2 ? 'pl-4' : 'pl-8'"
-              :to="`${link.route}#${tocLink.id}`"
-            >
-              {{ tocLink.text }}
-            </nuxt-link>
+            <div v-if="link.route === currentRoute">
+              <nuxt-link
+                v-for="tocLink of link.toc"
+                :key="tocLink.id"
+                class="block hover:text-primary opacity-75 mt-1"
+                :class="tocLink.depth === 2 ? 'pl-4' : 'pl-8'"
+                :to="`${link.route}#${tocLink.id}`"
+              >
+                {{ tocLink.text }}
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </nav>
