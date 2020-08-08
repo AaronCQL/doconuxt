@@ -6,13 +6,13 @@
       "matchPath": "/getting-started/*", // optional; show this category if route matches matchPath, defaults to always show
       "links": [
         {
-          "path": "/introduction", // required
+          "route": "/introduction", // required
           "title": "Introduction", // optional; when set will be used for sidenav and pagination; defaults to slug
           "toc": 3, // optional; defaults to 2
           "showToc": true // optional; defaults to true
         },
         {
-          "path": "/nuxt-content",
+          "route": "/nuxt-content",
           "title": "Nuxt Content"
         }
       ]
@@ -21,17 +21,17 @@
       "category": "Developer Notes",
       "links": [
         {
-          "path": "/roadmap"
+          "route": "/roadmap"
         },
         {
-          "path": "/configuration"
+          "route": "/configuration"
         },
         {
-          "path": "/deploying",
+          "route": "/deploying",
           "toc": 3
         },
         {
-          "path": "/notes"
+          "route": "/notes"
         }
       ]
     }
