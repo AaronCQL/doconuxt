@@ -1,20 +1,26 @@
-# nuxt-content-docs-template
+# Doconuxt
 
-## Build Setup
+**Doconuxt** is a [@nuxt/content](https://content.nuxtjs.org/) powered static site generator for Markdown content. It is minimal, opinionated, and comes with a default theme.
 
-```bash
-# install dependencies
-$ npm install
+> **Expect bugs and breaking changes before a stable version is released!**
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## Documentation
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+Check out the documentation written with Doconuxt itself at https://doconuxt.vercel.app/.
 
-# generate static project
-$ npm run generate
-```
+## Features
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+- **Instantaneous hot reload** for changes within the `content/` directory
+- **Zero config and easy to setup** with a small set of intuitive API
+- **Blazing fast page regeneration** when deploying
+- **Native support for Vue components**
+- **Mobile optimised** with easy navigation
+- **LaTeX math support** via KaTeX
+
+## Acknowledgements
+
+Many thanks to the [Nuxt.js](https://nuxtjs.org/) and [@nuxt/content](https://content.nuxtjs.org/) team for coming up with the fantastic tools used. Special mention goes to the team at @nuxt/content which greatly inspired Doconuxt.
+
+## License
+
+[MIT License](https://github.com/AaronCQL/doconuxt/blob/master/LICENSE)
