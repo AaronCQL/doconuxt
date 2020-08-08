@@ -1,5 +1,5 @@
 {
-  "name": "doconuxt-theme",
+  "name": "doconuxt",
   "version": "0.0.1",
   "license": "MIT",
   "main": "nuxt.config.js",
@@ -16,6 +16,6 @@
     "remark-math": "^2.0.1"
   },
   "devDependencies": {
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.1"
   }
 }

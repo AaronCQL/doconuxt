@@ -1,17 +1,17 @@
 {
   "name": "doconuxt-dev",
   "version": "0.1.0",
-  "description": "To aid in developing the doconuxt-theme package.",
+  "description": "To aid in developing the doconuxt package.",
+  "main": "nuxt.config.js",
   "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
     "generate": "nuxt generate",
     "start": "nuxt start"
   },
   "dependencies": {
-    "doconuxt-theme": "^0.0.1",
-    "nuxt": "^2.14.0"
+    "doconuxt": "^0.0.1",
+    "nuxt": "^2.14.1"
   }
 }

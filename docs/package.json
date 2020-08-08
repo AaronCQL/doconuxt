@@ -1,17 +1,17 @@
 {
-  "name": "docs",
+  "name": "doconuxt-docs",
   "version": "0.0.1",
   "description": "Documentation for Doconuxt",
   "main": "nuxt.config.js",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate",
     "start": "nuxt start"
   },
   "dependencies": {
-    "doconuxt-theme": "^0.0.1",
+    "doconuxt": "^0.0.1",
     "nuxt": "^2.14.1"
   }
 }

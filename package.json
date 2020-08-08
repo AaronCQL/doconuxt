@@ -1,17 +1,19 @@
 {
-  "name": "doconuxt",
+  "name": "doconuxt-workspace",
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "doconuxt-dev",
-    "doconuxt-theme",
+    "packages/*",
+    "dev",
     "docs"
   ],
   "scripts": {
-    "dev": "nuxt doconuxt-dev",
-    "build": "nuxt build doconuxt-dev",
-    "generate": "nuxt generate doconuxt-dev",
-    "start": "nuxt start doconuxt-dev"
+    "dev": "nuxt dev dev",
+    "generate": "nuxt generate dev",
+    "start": "nuxt start dev",
+    "docs:dev": "nuxt dev docs",
+    "docs:generate": "nuxt generate docs",
+    "docs:start": "nuxt start docs"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
@@ -21,7 +23,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "nuxt": "^2.14.0",
+    "nuxt": "^2.14.1",
     "prettier": "^2.0.5"
   }
 }
