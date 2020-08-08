@@ -25,7 +25,7 @@ async function getLinkGroups($content, linkGroups) {
         .where({ route: link.route })
         .only(["title", "toc"])
         .fetch();
-      link.title = title;
+      link.title = link.title || title;
       link.toc = toc.filter((data) => data.depth <= (link.toc ?? 2));
     }
   }
