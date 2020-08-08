@@ -56,7 +56,7 @@
             >
               {{ link.title }}
             </nuxt-link>
-            <div v-if="link.route === currentRoute">
+            <div v-if="link.persistentToc || link.route === currentRoute">
               <nuxt-link
                 v-for="tocLink of link.toc"
                 :key="tocLink.id"
