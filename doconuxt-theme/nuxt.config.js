@@ -3,6 +3,29 @@ import path from "path";
 import { getRouteWithoutTrailingIndex } from "./utils/routeUtils";
 import { USER_CONFIG_DIR } from "./utils/constants";
 
+function inferDocumentTitle(document) {
+  const h1Regex = /^\s*#.*/m;
+  if (document.extension !== ".md") {
+    // ignore non markdown files
+    return;
+  }
+  if (document.title) {
+    // title is already set via yaml frontmatter
+    return;
+  }
+
+  const match = document.text.match(h1Regex);
+  if (!match) {
+    // no h1 tag set
+    document.title = "Untitled";
+    return;
+  }
+  // infer title from first h1 tag
+  const unparsedHeader = match[0].trim();
+  const textRegex = /^#\s*/;
+  document.title = unparsedHeader.replace(textRegex, "") || "Untitled";
+}
+
 export default {
   mode: "universal",
   target: "static",
@@ -54,6 +77,7 @@ export default {
         });
       });
     },
+    "content:file:beforeInsert": inferDocumentTitle,
   },
   buildModules: [
     "@nuxtjs/eslint-module",
