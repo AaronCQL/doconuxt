@@ -30,13 +30,13 @@
 - [x] In `default` layout, use Vuex and `nuxtServerInit` to get `content` changes to [support Dev mode hot reload](https://content.nuxtjs.org/advanced#handling-hot-reload)
 - [ ] Test out full suite of markdown styles
 - [ ] [Search functionality](https://content.nuxtjs.org/examples#search)
-- [ ] Table of contents for current page
+- [x] Table of contents for current page
 - [ ] Code block
   - [x] Style filename properly
   - [ ] Include way to copy code block
   - [ ] Add line highlighting
 - [ ] Style checkbox properly
-- [ ] Handle and style 404 not found errors
+- [x] Handle and style 404 not found errors
 - [x] User customisable side nav
 - [ ] User customisable top nav
 
