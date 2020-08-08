@@ -1,0 +1,33 @@
+{
+  "sidenav": [
+    {
+      "category": "Getting Started",
+      "links": [
+        {
+          "route": "/" // refer to `content/index`
+        },
+        {
+          "route": "/quick-start",
+          "persistentToc": true
+        },
+        {
+          "route": "/page-routing"
+        },
+        {
+          "route": "/writing-markdown"
+        }
+      ]
+    },
+    {
+      "category": "Configuration",
+      "links": [
+        {
+          "route": "/navigation"
+        },
+        {
+          "route": "/theme"
+        }
+      ]
+    }
+  ]
+}

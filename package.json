@@ -4,7 +4,8 @@
   "private": true,
   "workspaces": [
     "doconuxt-dev",
-    "doconuxt-theme"
+    "doconuxt-theme",
+    "docs"
   ],
   "scripts": {
     "dev": "nuxt doconuxt-dev",
