@@ -15,6 +15,10 @@ export const mutations = {
 };
 
 async function getLinkGroups($content, linkGroups) {
+  if (!linkGroups || !linkGroups.length) {
+    return;
+  }
+
   for (const { links } of linkGroups) {
     for (const link of links) {
       const [{ title, toc }] = await $content("/", { deep: true })
@@ -29,6 +33,10 @@ async function getLinkGroups($content, linkGroups) {
 }
 
 function getRouteInformation(linkGroups) {
+  if (!linkGroups || !linkGroups.length) {
+    return;
+  }
+
   const links = linkGroups
     .flatMap((group) => group.links)
     .map(({ route, title }) => {

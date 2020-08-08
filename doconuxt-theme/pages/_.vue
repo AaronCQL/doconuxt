@@ -33,11 +33,11 @@ export default {
   },
   computed: {
     prev() {
-      return this.$store.state.navigation.routeInformation[this.$route.path]
+      return this.$store.state.navigation.routeInformation?.[this.$route.path]
         ?.prev;
     },
     next() {
-      return this.$store.state.navigation.routeInformation[this.$route.path]
+      return this.$store.state.navigation.routeInformation?.[this.$route.path]
         ?.next;
     },
   },
