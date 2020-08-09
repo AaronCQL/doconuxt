@@ -13,7 +13,8 @@
     "start": "nuxt start dev",
     "docs:dev": "nuxt dev docs",
     "docs:generate": "nuxt generate docs",
-    "docs:start": "nuxt start docs"
+    "docs:start": "nuxt start docs",
+    "release": "yarn publish packages/doconuxt"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
