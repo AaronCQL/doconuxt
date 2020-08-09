@@ -21,10 +21,21 @@ function inferDocumentTitle(document) {
   return unparsedHeader.replace(textRegex, "") || "Untitled";
 }
 
+async function getContentRoutes() {
+  const { $content } = require("@nuxt/content");
+  const files = await $content("/", { deep: true })
+    .only(["path"])
+    .where({ dir: { $ne: USER_CONFIG_DIR } }) // exclude the user config folder
+    .fetch();
+
+  return files.map((file) => getRouteWithoutTrailingIndex(file.path));
+}
+
 export default {
   mode: "universal",
   target: "static",
   srcDir: __dirname,
+  transpile: [__dirname],
   head: {
     title: process.env.npm_package_name || "",
     meta: [
@@ -62,7 +73,10 @@ export default {
         nuxt.options.content.dir || "content"
       );
       // configure static dir
-      nuxt.options.dir.static = path.resolve(nuxt.options.rootDir, "static");
+      nuxt.options.dir.static = path.resolve(
+        nuxt.options.rootDir,
+        nuxt.options.dir.static || "static"
+      );
       // configure components dir
       // see: https://github.com/nuxt/components#library-authors
       nuxt.hook("components:dirs", (dirs) => {
@@ -73,14 +87,12 @@ export default {
       });
     },
     "content:file:beforeInsert": (document) => {
-      if (document.extension !== ".md") {
-        // ignore non markdown files
-        return;
+      if (document.extension === ".md") {
+        // infer document title
+        document.title = inferDocumentTitle(document);
+        // actual route seen by users
+        document.route = getRouteWithoutTrailingIndex(document.path);
       }
-      // infer document title
-      document.title = inferDocumentTitle(document);
-      // actual route seen by users
-      document.route = getRouteWithoutTrailingIndex(document.path);
     },
   },
   buildModules: [
@@ -91,18 +103,9 @@ export default {
   modules: ["@nuxt/content"],
   generate: {
     fallback: "404.html",
-    async routes() {
-      const { $content } = require("@nuxt/content");
-      const files = await $content()
-        .only(["path"])
-        .where({ dir: { $ne: USER_CONFIG_DIR } }) // exclude the user config folder
-        .fetch();
-
-      return files.map((file) => getRouteWithoutTrailingIndex(file.path));
-    },
+    routes: getContentRoutes,
   },
   content: {
-    liveEdit: false,
     markdown: {
       prism: {
         theme: "prism-themes/themes/prism-dracula.css",
@@ -115,5 +118,4 @@ export default {
       rehypePlugins: ["rehype-katex"],
     },
   },
-  build: {},
 };
