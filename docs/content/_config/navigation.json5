@@ -7,8 +7,7 @@
           "route": "/" // refer to `content/index`
         },
         {
-          "route": "/quick-start",
-          "persistentToc": true
+          "route": "/quick-start"
         },
         {
           "route": "/page-routing"
@@ -22,7 +21,8 @@
       "category": "Configuration",
       "links": [
         {
-          "route": "/navigation"
+          "route": "/navigation",
+          "toc": 3
         },
         {
           "route": "/theme"

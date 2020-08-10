@@ -1,6 +1,6 @@
 # Navigation
 
-To start configuring the side and top navigation, create a `content/_config/navigation.json5` file like so:
+To start configuring the side and top navigation (referred to as **Sidenav** and **Topnav**), create a `content/_config/navigation.json5` file like so:
 
 ```
 content
@@ -18,21 +18,20 @@ Use the `.json5` extension if you want to enjoy the JSON5 features like comments
 
 </alert>
 
-## JSON schema
+## Sidenav
 
-The full schema of the `navigation.json5` is given here as reference. Note that most fields are optional and come with sensible defaults.
+The following example shows the full schema of the `sidenav` key in `navigation.json5`. Note that most fields are optional, and comes with sensible defaults.
 
 ```json{}[navigation.json5]
 {
-  "topnav": ..., // coming soon!
-  "sidenav": [
-    {
+  "sidenav": [ // Array<LinkGroup>
+    { // LinkGroup
       "category": string, // optional
-      "links": [          // required
-        {
-          "route": string,         // required
-          "title": string,         // optional
-          "toc": number,           // optional
+      "links": [ // Array<Link>
+        { // Link
+          "route": string, // required
+          "title": string, // optional
+          "toc": number, // optional
           "persistentToc": boolean // optional
         }
       ]
@@ -41,45 +40,21 @@ The full schema of the `navigation.json5` is given here as reference. Note that 
 }
 ```
 
-## Side navigation
-
-Taking out all the required fields, the most basic example to generate the sidenav links to `index.md`, `nested/index.md`, and `nested/hello.md` is as follows:
-
-```json5{}[navigation.json5]
-{
-  "sidenav": [
-    {
-      "links": [
-        { "route": "/" },
-        { "route": "/nested" },
-        { "route": "/nested/hello" }
-      ]
-    }
-  ]
-}
-```
-
-<alert>
-
-For a real world example, check out the `navigation.json5` for this very documentation site.
-
-</alert>
-
 ### `sidenav` (required)
 
 - **Type**: `Array<LinkGroup>`
-- **Description**: each `LinkGroup` has an optional `category` key and a required `links` key
+- **Description**: each `LinkGroup` has an optional `category` key and a required `links` key, and can be thought of as a group of related links
 
-### `category` (optional)
+### `category`
 
 - **Type**: `string`
-- **Description**: category of the group of links; displayed on the sidenav at the top of the group of links
-- **Default**: `""`
+- **Description**: the category name of the group of `links`; displayed on the sidenav at the top of the group of links
+- **Default**: `null`
 
 ### `links` (required)
 
 - **Type**: `Array<Link>`
-- **Description**: each `Link` contains a required `route` key, and 3 other optional keys
+- **Description**: each `Link` contains a required `route` key, and 3 other optional keys (`title`, `toc`, and `persistentToc`)
 
 ### `route` (required)
 
@@ -88,7 +63,7 @@ For a real world example, check out the `navigation.json5` for this very documen
 
 Rule of thumb: the first leading `/` is always present, and the last trailing `/` should never be present. For instance, use `/home` instead of `home` or `/home/`
 
-### `title` (optional)
+### `title`
 
 - **Type**: `string`
 - **Description**: the title of the `Link`, shown in the sidenav and the pagination at the bottom of each page
@@ -96,7 +71,7 @@ Rule of thumb: the first leading `/` is always present, and the last trailing `/
 
 Order of precedence: `title` > YAML front matter title > first H1 tag
 
-### `toc` (optional)
+### `toc`
 
 - **Type**: `number`
 - **Description**: the level of depth of the table of contents
@@ -104,13 +79,37 @@ Order of precedence: `title` > YAML front matter title > first H1 tag
 
 The maximum number is `3`, and any number less than or equal to `1` will disable the table of contents.
 
-### `persistentToc` (optional)
+### `persistentToc`
 
 - **Type**: `boolean`
 - **Description**: whether to show the table of contents regardless of the current route
 - **Default**: `false`
 
-## Top navigation
+### Minimal example
+
+Taking the `content/` directory as the root, the most basic example to generate the sidenav links to `index.md`, `nested/index.md`, and `nested/hello.md` is as follows:
+
+```json5{}[navigation.json5]
+{
+  "sidenav": [
+    {
+      "links": [
+        { "route": "/" }, // index.md
+        { "route": "/nested" }, // nested/index.md
+        { "route": "/nested/hello" } // nested/hello.md
+      ]
+    }
+  ]
+}
+```
+
+<alert>
+
+For a real world example, [check out the `navigation.json5` for this very documentation site](https://github.com/AaronCQL/doconuxt/blob/master/docs/content/_config/navigation.json5).
+
+</alert>
+
+## Topnav
 
 <alert>
 
