@@ -106,7 +106,7 @@ This is a `warning` callout
 </callout>
 
 ```md{}[md]
-<callout type="warning" :title="warning">
+<callout type="warning" title="warning">
 
 This is a `warning` callout
 
