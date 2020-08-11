@@ -24,11 +24,11 @@ function inferDocumentTitle(document) {
 async function getContentRoutes() {
   const { $content } = require("@nuxt/content");
   const files = await $content("/", { deep: true })
-    .only(["path"])
+    .only(["route"])
     .where({ dir: { $ne: USER_CONFIG_DIR } }) // exclude the user config folder
     .fetch();
 
-  return files.map((file) => getRouteWithoutTrailingIndex(file.path));
+  return files.map((file) => file.route);
 }
 
 export default {

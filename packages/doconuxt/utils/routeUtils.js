@@ -6,18 +6,8 @@ const TRAILING_INDEX_REGEX = /\/index\/?$/;
  * @param {string} route the route to check and correct
  * @returns {string} a new route guaranteed to have the `/` prefix
  */
-function getPrefixedRoute(route) {
+function getSlashPrefixedRoute(route) {
   return route.charAt(0) === "/" ? route : "/" + route;
-}
-
-/**
- * Checks and returns a route guaranteed to not have the `/` prefix
- *
- * @param {string} route the route to check and correct
- * @returns {string} a new route guaranteed to not have the `/` prefix
- */
-function getNonPrefixedRoute(route) {
-  return route.charAt(0) === "/" ? route.substring(1) : route;
 }
 
 /**
@@ -31,7 +21,7 @@ function isTrailingIndexRoute(route) {
     throw new TypeError("Argument route is not of type string");
   }
 
-  const prefixedRoute = getPrefixedRoute(route);
+  const prefixedRoute = getSlashPrefixedRoute(route);
 
   return !!prefixedRoute.match(TRAILING_INDEX_REGEX);
 }
@@ -61,11 +51,11 @@ function getRouteWithoutTrailingIndex(route) {
     throw new TypeError("Argument route is not of type string");
   }
 
-  const prefixedRoute = getPrefixedRoute(route);
+  const prefixedRoute = getSlashPrefixedRoute(route);
   // this might result in "" if `prefixedRoute` is "/index"
   const withoutTrailingIndex = prefixedRoute.replace(TRAILING_INDEX_REGEX, "");
   // make sure returned route has `/` prefix
-  return getPrefixedRoute(withoutTrailingIndex);
+  return getSlashPrefixedRoute(withoutTrailingIndex);
 }
 
 /**
@@ -79,31 +69,17 @@ function getRouteWithoutTrailingSlash(route) {
     throw new TypeError("Argument route is not of type string");
   }
 
-  return getPrefixedRoute(route.slice(0, -1));
-}
-
-/**
- * Returns a title case version of the `slug`.
- *
- * @param {string} slug the slug to transform
- */
-function slugToTitleCase(slug) {
-  if (typeof slug !== "string") {
-    throw new TypeError("Argument route is not of type string");
+  if (!isTrailingSlashRoute(route)) {
+    return getSlashPrefixedRoute(route);
   }
 
-  return slug
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
-    .join(" ");
+  return getSlashPrefixedRoute(route.slice(0, -1));
 }
 
 export {
   TRAILING_INDEX_REGEX,
-  getNonPrefixedRoute,
   isTrailingIndexRoute,
   getRouteWithoutTrailingIndex,
   isTrailingSlashRoute,
   getRouteWithoutTrailingSlash,
-  slugToTitleCase,
 };
