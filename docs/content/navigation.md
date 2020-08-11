@@ -12,11 +12,11 @@ content
 - The `_config/` directory is where all Doconuxt configuration files reside in
 - [JSON5](https://json5.org/) is a superset of JSON which allows for more developer friendly features like comments and trailing commas
 
-<alert type="warning" title="warning">
+<callout type="warning" title="warning">
 
 Use the `.json5` extension if you want to enjoy the JSON5 features like comments. Using JSON5 features in a `.json` file will likely result in parsing errors.
 
-</alert>
+</callout>
 
 ## Sidenav
 
@@ -87,7 +87,7 @@ The maximum number is `3`, and any number less than or equal to `1` will disable
 
 ### Minimal example
 
-Taking the `content/` directory as the root, the most basic example to generate the sidenav links to `index.md`, `nested/index.md`, and `nested/hello.md` is as follows:
+Taking the `content/` directory as the root, the most basic example to generate the Sidenav links to `index.md`, `nested/index.md`, and `nested/hello.md` is as follows:
 
 ```json5{}[navigation.json5]
 {
@@ -103,16 +103,16 @@ Taking the `content/` directory as the root, the most basic example to generate 
 }
 ```
 
-<alert>
+<callout>
 
 For a real world example, [check out the `navigation.json5` for this very documentation site](https://github.com/AaronCQL/doconuxt/blob/master/docs/content/_config/navigation.json5).
 
-</alert>
+</callout>
 
 ## Topnav
 
-<alert>
+<callout>
 
 **Coming soon!**
 
-</alert>
+</callout>

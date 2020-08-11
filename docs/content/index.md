@@ -1,14 +1,12 @@
 # Introduction
 
-**Doconuxt** is a [@nuxt/content](https://content.nuxtjs.org/) powered static site generator for content heavy sites. It is minimal, opinionated, and comes with a default theme.
+**Doconuxt** is a [@nuxt/content](https://content.nuxtjs.org/) powered static site generator for Markdown content. It is minimal, opinionated, and comes with a default theme.
 
-<alert type="danger" :title="true">
+<callout type="danger" title="warning">
 
-**Expect bugs and breaking changes before a stable version is released!**
+**Expect bugs and breaking changes before a stable version is released!** Head to the [alternatives](#alternatives) section if you need a tried and tested solution.
 
-Head to the [alternatives](#alternatives) section if you need a tried and tested solution.
-
-</alert>
+</callout>
 
 ## Features
 
@@ -27,7 +25,7 @@ This project is greatly influenced by the work of the [official Nuxt Content the
 
 ### VuePress
 
-The tried and tested solution that is powering most of Vue's documentation. Consider using VuePress if you need a production ready solution.
+The battle tested solution that is powering most of Vue's documentation. Consider using VuePress if you need a production ready solution.
 
 ### Docz / Docusaurus
 

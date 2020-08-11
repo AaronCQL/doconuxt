@@ -13,7 +13,8 @@
           "route": "/page-routing"
         },
         {
-          "route": "/writing-markdown"
+          "route": "/writing-markdown",
+          "toc": 3
         }
       ]
     },

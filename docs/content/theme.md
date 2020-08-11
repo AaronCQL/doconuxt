@@ -1,7 +1,7 @@
 # Theme
 
-<alert>
+<callout>
 
 **Coming soon!**
 
-</alert>
+</callout>
