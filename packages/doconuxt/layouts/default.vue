@@ -65,7 +65,7 @@
                 v-for="tocLink of link.toc"
                 :key="tocLink.id"
                 :href="`#${tocLink.id}`"
-                class="scrollactive-item block hover:text-primary opacity-75 mt-1"
+                class="scrollactive-item block hover:text-primary hover:opacity-100 opacity-75 mt-1"
                 :class="tocLink.depth === 2 ? 'pl-4' : 'pl-8'"
               >
                 {{ tocLink.text }}
@@ -75,7 +75,7 @@
               v-for="tocLink of link.toc"
               v-else-if="link.persistentToc"
               :key="tocLink.id"
-              class="block hover:text-primary opacity-75 mt-1"
+              class="block hover:text-primary hover:opacity-100 opacity-75 mt-1"
               :class="tocLink.depth === 2 ? 'pl-4' : 'pl-8'"
               :to="`${link.route}#${tocLink.id}`"
             >
@@ -122,6 +122,6 @@ export default {
 }
 
 .is-active {
-  @apply text-primary font-semibold;
+  @apply text-primary font-semibold opacity-100;
 }
 </style>
