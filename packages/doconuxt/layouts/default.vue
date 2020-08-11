@@ -122,6 +122,6 @@ export default {
 }
 
 .is-active {
-  @apply text-primary;
+  @apply text-primary font-semibold;
 }
 </style>

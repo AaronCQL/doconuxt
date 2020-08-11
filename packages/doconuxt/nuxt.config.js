@@ -100,6 +100,15 @@ export default {
     "@nuxtjs/eslint-module",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          "Open+Sans": [300, 400, 600, 700, 800],
+          "Source+Code+Pro": [300, 400, 600, 700, 800],
+        },
+      },
+    ],
   ],
   modules: ["@nuxt/content"],
   generate: {

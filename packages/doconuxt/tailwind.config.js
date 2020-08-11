@@ -5,10 +5,15 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 const path = require("path");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        mono: ["Source Code Pro", ...defaultTheme.fontFamily.mono],
+      },
       colors: {
         primary: "var(--primary)",
       },
