@@ -15,10 +15,6 @@ Uses `katex`, `remark-math`, and `rehype-katex`.
 - KaTeX CSS is imported in `~/assets/css/katex.css`
 - `remark-math` and `rehype-katex` are added to `nuxt.config.js` in `content.markdown.remarkPlugins`.
 
-### Known issues
-
-- `\vec{x}` - $\vec{x}$ does not render the vector arrow
-
 ## FontAwesome
 
 Uses `@fortawesome/fontawesome-svg-core`, `@fortawesome/free-solid-svg-icons`, and `@fortawesome/vue-fontawesome`
