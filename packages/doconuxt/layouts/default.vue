@@ -18,7 +18,7 @@
         /> -->
         <theme-switcher></theme-switcher>
         <button
-          title="Toggle Navigation"
+          aria-label="Toggle side navigation"
           class="md:hidden focus:outline-none p-2 text-xl"
           @click="toggleNav"
         >
