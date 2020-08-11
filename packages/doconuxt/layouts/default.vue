@@ -57,7 +57,7 @@
               {{ link.title }}
             </nuxt-link>
             <scrollactive
-              v-if="link.persistentToc || link.route === currentRoute"
+              v-if="link.route === currentRoute"
               :offset="1"
               :scroll-offset="0"
             >
@@ -71,6 +71,16 @@
                 {{ tocLink.text }}
               </a>
             </scrollactive>
+            <nuxt-link
+              v-for="tocLink of link.toc"
+              v-else-if="link.persistentToc"
+              :key="tocLink.id"
+              class="block hover:text-primary opacity-75 mt-1"
+              :class="tocLink.depth === 2 ? 'pl-4' : 'pl-8'"
+              :to="`${link.route}#${tocLink.id}`"
+            >
+              {{ tocLink.text }}
+            </nuxt-link>
           </div>
         </div>
       </nav>
