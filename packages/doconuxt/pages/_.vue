@@ -40,6 +40,36 @@ export default {
       return this.$store.state.navigation.routeInformation?.[this.$route.path]
         ?.next;
     },
+    metaInfo() {
+      return this.$store.state.settings.settings;
+    },
+    metaTitle() {
+      // let index page have site title
+      return this.content.route === "/"
+        ? this.metaInfo.title
+        : `${this.content.title} | ${this.metaInfo.title}`;
+    },
+  },
+  head() {
+    return {
+      title: this.metaTitle,
+      meta: [
+        // Open Graph
+        { hid: "og:title", property: "og:title", content: this.metaTitle },
+        // Twitter Card
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.metaTitle,
+        },
+        // description
+        {
+          hid: "description",
+          name: "description",
+          content: this.metaInfo.description,
+        },
+      ],
+    };
   },
 };
 </script>
