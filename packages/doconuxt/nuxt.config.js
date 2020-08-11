@@ -53,16 +53,10 @@ export default {
     "@/assets/css/content.css",
     "@/assets/css/theme.css",
     "@/assets/css/katex.css",
-    "@fortawesome/fontawesome-svg-core/styles.css",
   ],
-  purgeCSS: {
-    // prevent purge of fontawesome css
-    whitelistPatterns: [/svg.*/, /fa.*/],
-  },
   plugins: [
     "@/plugins/main",
     "@/plugins/routeHandler",
-    "@/plugins/fontawesome",
     "@/plugins/vue-scrollactive",
   ],
   components: true,

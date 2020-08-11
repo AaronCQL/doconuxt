@@ -3,13 +3,15 @@
     <nuxt-content ref="nuxt-content" :document="content" />
     <footer class="nuxt-content flex justify-between items-center h-16">
       <div>
-        <nuxt-link v-if="prev" :to="prev.route">
-          &larr; {{ prev.title }}
+        <nuxt-link v-if="prev" class="flex items-center" :to="prev.route">
+          <icon-arrow-left class="mr-1 w-4 h-4" />
+          {{ prev.title }}
         </nuxt-link>
       </div>
       <div>
-        <nuxt-link v-if="next" :to="next.route">
-          {{ next.title }} &rarr;
+        <nuxt-link v-if="next" class="flex items-center" :to="next.route">
+          {{ next.title }}
+          <icon-arrow-right class="ml-1 w-4 h-4" />
         </nuxt-link>
       </div>
     </footer>

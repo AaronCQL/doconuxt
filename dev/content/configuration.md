@@ -15,16 +15,6 @@ Uses `katex`, `remark-math`, and `rehype-katex`.
 - KaTeX CSS is imported in `~/assets/css/katex.css`
 - `remark-math` and `rehype-katex` are added to `nuxt.config.js` in `content.markdown.remarkPlugins`.
 
-## FontAwesome
-
-Uses `@fortawesome/fontawesome-svg-core`, `@fortawesome/free-solid-svg-icons`, and `@fortawesome/vue-fontawesome`
-
-Within `~/plugins/fontawesome.js`, import the icons and add to the `library` before using it in any vue file:
-
-```jsx[*.vue]
-<font-awesome-icon icon="moon" />
-```
-
 ## Tailwind
 
 Uses `@nuxtjs/tailwindcss`.

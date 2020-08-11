@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <header
       style="border-color: var(--border);"
-      class="z-50 fixed top-0 h-16 w-full px-4 lg:px-12 border-b flex justify-between items-center"
+      class="z-50 fixed top-0 h-16 w-full px-4 border-b flex justify-between items-center"
     >
       <nuxt-link
         class="cursor-pointer text-2xl font-bold hover:text-primary"
@@ -19,11 +19,11 @@
         <theme-switcher></theme-switcher>
         <button
           title="Toggle Navigation"
-          class="md:hidden focus:outline-none px-4 py-2 text-xl hover:text-primary"
+          class="md:hidden focus:outline-none p-2 text-xl"
           @click="toggleNav"
         >
-          <font-awesome-icon v-if="isNavOpen" icon="times" />
-          <font-awesome-icon v-else icon="bars" />
+          <icon-menu v-if="!isNavOpen" class="w-6 h-6" />
+          <icon-x v-else class="w-6 h-6" />
         </button>
       </div>
     </header>

@@ -1,6 +1,11 @@
 <template>
-  <button class="text-xl py-1 px-2" @click="$colorMode.preference = nextTheme">
-    <font-awesome-icon :icon="faIcon" />
+  <button
+    class="text-xl p-2 focus:outline-none"
+    aria-label="Toggle theme"
+    @click="$colorMode.preference = nextTheme"
+  >
+    <icon-sun v-if="theme === 'light'" class="h-6 w-6" />
+    <icon-moon v-else class="h-6 w-6" />
   </button>
 </template>
 
@@ -14,18 +19,9 @@ export default {
     nextTheme() {
       if (this.theme === "light") {
         return "dark";
-      } else if (this.theme === "dark") {
-        return "black";
+      } else {
+        return "light";
       }
-      return "light";
-    },
-    faIcon() {
-      if (this.theme === "light") {
-        return "sun";
-      } else if (this.theme === "dark") {
-        return "moon";
-      }
-      return "code";
     },
   },
 };
