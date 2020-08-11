@@ -63,6 +63,7 @@ export default {
     "@/plugins/main",
     "@/plugins/routeHandler",
     "@/plugins/fontawesome",
+    "@/plugins/vue-scrollactive",
   ],
   components: true,
   hooks: {
