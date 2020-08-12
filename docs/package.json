@@ -11,7 +11,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "doconuxt": "^0.0.1",
+    "doconuxt": "^0.0.4",
     "nuxt": "^2.14.1"
   }
 }
