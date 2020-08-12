@@ -58,12 +58,18 @@ function getRouteInformation(linkGroups) {
 // TODO: add error checking and validation
 export const actions = {
   async fetchNavigationData({ commit }) {
-    const config = await this.$content(NAVIGATION_CONFIG_PATH).fetch();
+    try {
+      const config = await this.$content(NAVIGATION_CONFIG_PATH).fetch();
 
-    const linkGroups = await getLinkGroups(this.$content, config.sidenav);
-    const routeInformation = getRouteInformation(linkGroups);
+      const linkGroups = await getLinkGroups(this.$content, config.sidenav);
+      const routeInformation = getRouteInformation(linkGroups);
 
-    commit("setLinkGroups", linkGroups);
-    commit("setRouteInformation", routeInformation);
+      commit("setLinkGroups", linkGroups);
+      commit("setRouteInformation", routeInformation);
+    } catch (error) {
+      // navigation.json not found; warn user
+      // eslint-disable-next-line no-console
+      console.warn("_config/navigation.json not found");
+    }
   },
 };
