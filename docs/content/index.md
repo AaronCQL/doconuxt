@@ -4,7 +4,7 @@
 
 <callout type="danger" title="warning">
 
-**Expect bugs and breaking changes before a stable version is released!** Head to the [alternatives](#alternatives) section if you need a tried and tested solution.
+**This is still largely experimental; expect bugs and breaking changes before a stable version is released!** Head to the [alternatives](#alternatives) section if you need a production ready solution.
 
 </callout>
 
@@ -21,7 +21,7 @@
 
 ### Docs Theme @nuxt/content 
 
-This project is greatly influenced by the work of the [official Nuxt Content theme](https://content.nuxtjs.org/themes/docs/). That said, there are still significant differences in the API and behaviour. In particular, Doconuxt has less customisation and is more opinionated. 
+This project is greatly influenced by the work of the [official Nuxt Content theme](https://content.nuxtjs.org/themes/docs/). That said, there are still significant differences in the API and behaviour. In particular, Doconuxt may be more opinionated with less customisations.
 
 ### VuePress
 

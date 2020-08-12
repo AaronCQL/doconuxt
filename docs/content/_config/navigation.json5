@@ -4,19 +4,19 @@
       "category": "Getting Started",
       "links": [
         {
-          "route": "/" // refer to `content/index`
+          "route": "/", // refer to `content/index`
         },
         {
-          "route": "/quick-start"
+          "route": "/quick-start",
         },
         {
-          "route": "/page-routing"
+          "route": "/page-routing",
         },
         {
           "route": "/writing-markdown",
-          "toc": 3
-        }
-      ]
+          "toc": 3,
+        },
+      ],
     },
     {
       "category": "Configuration",
@@ -29,9 +29,17 @@
           "route": "/site-settings",
         },
         {
-          "route": "/theme"
-        }
-      ]
-    }
-  ]
+          "route": "/theme",
+        },
+      ],
+    },
+    {
+      "category": "Miscellaneous",
+      "links": [
+        {
+          "route": "/roadmap",
+        },
+      ],
+    },
+  ],
 }
