@@ -1,5 +1,7 @@
 # Site Settings
 
+## Metadata
+
 To start configuring the site settings (like metadata and GitHub repository), create a `content/_config/settings.json5` file like so:
 
 ```
@@ -21,25 +23,25 @@ The following example shows the full schema of `settings.json5`:
 
 Items marked with *important*, though not strictly required, are highly recommended to be set.
 
-## `title`
+### `title`
 
 - Type: `string`
 - Description: title of the web page; used for the HTML title tag
 - Default: `package.json` title
 
-## `description`
+### `description`
 
 - Type: `string`
 - Description: description of the web page; used in the HTML meta tag for the description tag
 - Default: `package.json` description
 
-## `github`
+### `github`
 
 - Type: `string`
 - Description: the `<user>/<repo>` where your source code is at; used to generate the correct link at the Topnav
 - Default: `null`
 
-## Example
+### Example
 
 ```json{}[settings.json5]
 {
@@ -48,3 +50,7 @@ Items marked with *important*, though not strictly required, are highly recommen
   "github": "AaronCQL/doconuxt"
 }
 ```
+
+## Favicon
+
+To use a favicon, place it in a `static/` directory and name it exactly `favicon.ico`.

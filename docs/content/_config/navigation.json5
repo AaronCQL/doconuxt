@@ -27,6 +27,7 @@
         },
         {
           "route": "/site-settings",
+          "toc": 3
         },
         {
           "route": "/theme",
@@ -38,6 +39,7 @@
       "links": [
         {
           "route": "/roadmap",
+          "toc": 1,
         },
       ],
     },
