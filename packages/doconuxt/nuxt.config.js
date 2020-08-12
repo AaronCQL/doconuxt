@@ -91,7 +91,6 @@ export default {
     },
   },
   buildModules: [
-    "@nuxtjs/eslint-module",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     [
