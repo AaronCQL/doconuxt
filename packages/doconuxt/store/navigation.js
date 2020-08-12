@@ -26,7 +26,9 @@ async function getLinkGroups($content, linkGroups) {
         .only(["title", "toc"])
         .fetch();
       link.title = link.title || title;
-      link.toc = toc.filter((data) => data.depth <= (link.toc ?? 2));
+      link.toc = toc.filter(
+        (data) => data.depth <= (Number.isInteger(link.toc) ? link.toc : 2)
+      );
     }
   }
   return linkGroups;
@@ -45,8 +47,8 @@ function getRouteInformation(linkGroups) {
 
   const mapping = {};
   for (let i = 0; i < links.length; i++) {
-    const prev = links[i - 1] ?? null;
-    const next = links[i + 1] ?? null;
+    const prev = links[i - 1] || null;
+    const next = links[i + 1] || null;
 
     const currentRoute = links[i].route;
     mapping[currentRoute] = { prev, next };
