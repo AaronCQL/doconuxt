@@ -1,7 +1,6 @@
 import path from "path";
 
 import { getRouteWithoutTrailingIndex } from "./utils/routeUtils";
-import { USER_CONFIG_DIR } from "./utils/constants";
 
 function inferDocumentTitle(document) {
   if (document.title) {
@@ -19,16 +18,6 @@ function inferDocumentTitle(document) {
   const unparsedHeader = match[0].trim();
   const textRegex = /^#\s*/;
   return unparsedHeader.replace(textRegex, "") || "Untitled";
-}
-
-async function getContentRoutes() {
-  const { $content } = require("@nuxt/content");
-  const files = await $content("/", { deep: true })
-    .only(["route"])
-    .where({ dir: { $ne: USER_CONFIG_DIR } }) // exclude the user config folder
-    .fetch();
-
-  return files.map((file) => file.route);
 }
 
 export default {
@@ -106,7 +95,7 @@ export default {
   modules: ["@nuxt/content"],
   generate: {
     fallback: "404.html",
-    routes: getContentRoutes,
+    routes: ["/"],
   },
   content: {
     markdown: {
