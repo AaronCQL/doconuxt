@@ -4,6 +4,10 @@ This assumes you are comfortable with the Markdown syntax. Refer to the [officia
 
 All the official syntax is supported, with some added features that will be discussed here.
 
+## Headers
+
+Only H1 to H4 headers are styled. If you find yourself needing H5 and H6 headers, it probably means the structure of your documentation may be too nested.
+
 ## Links
 
 ### Internal links

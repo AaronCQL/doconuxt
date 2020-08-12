@@ -16,6 +16,7 @@
 - [x] VuePress like directory structure and page routing behaviour for `content/`
 - [x] User customisable Sidenav
 - [ ] User customisable Topnav
+- [x] User customisable site metadata and settings
 - [ ] User customisable themes
 - [ ] Locale/language picker for i18n support
 
@@ -25,6 +26,7 @@
 - [ ] Component showcase
 - [ ] Directory structure tree
 - [ ] Spoiler block
+- [ ] Badges
 - [ ] Panel block (for different code languages)
 
 ### Future
