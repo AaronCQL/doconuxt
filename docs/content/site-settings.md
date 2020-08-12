@@ -26,7 +26,7 @@ Items marked with *important*, though not strictly required, are highly recommen
 ### `title`
 
 - Type: `string`
-- Description: title of the web page; used for the HTML title tag
+- Description: title of the web page; used for the HTML title tag and displayed in the Topnav
 - Default: `package.json` title
 
 ### `description`

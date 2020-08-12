@@ -8,7 +8,7 @@
         class="cursor-pointer text-2xl font-bold hover:text-primary"
         to="/"
       >
-        Doconuxt
+        {{ title }}
       </nuxt-link>
       <div class="flex items-center">
         <!-- <input
@@ -115,6 +115,9 @@ export default {
     },
     githubRepo() {
       return this.$store.state.settings.settings.github;
+    },
+    title() {
+      return this.$store.state.settings.settings.title || "Doconuxt";
     },
   },
   methods: {
