@@ -12,8 +12,14 @@ export const mutations = {
 
 export const actions = {
   async fetchSettings({ commit }) {
-    const settings = await this.$content(SETTINGS_CONFIG_PATH).fetch();
+    try {
+      const settings = await this.$content(SETTINGS_CONFIG_PATH).fetch();
 
-    commit("setSettings", settings);
+      commit("setSettings", settings);
+    } catch (error) {
+      // settings.json not found; warn user
+      // eslint-disable-next-line no-console
+      console.warn("_config/settings.json not found");
+    }
   },
 };

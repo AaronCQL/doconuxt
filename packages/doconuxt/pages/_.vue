@@ -46,10 +46,13 @@ export default {
       return this.$store.state.settings.settings;
     },
     metaTitle() {
-      // let index page have site title
-      return this.content.route === "/"
-        ? this.metaInfo.title
-        : `${this.content.title} | ${this.metaInfo.title}`;
+      return this.metaInfo.title
+        ? this.content.route === "/"
+          ? // let index page have site title
+            this.metaInfo.title
+          : `${this.content.title} | ${this.metaInfo.title}`
+        : // let head defined in nuxt.config.js be default if no title is set
+          undefined;
     },
   },
   head() {
