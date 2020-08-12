@@ -1,0 +1,7 @@
+{
+  // meta title of the website
+  "title": "Doconuxt",
+  // meta description of the website
+  "description": "A @nuxt/content powered static site generator for Markdown content.",
+  "github": "AaronCQL/doconuxt"
+}

@@ -26,6 +26,9 @@
           "toc": 3
         },
         {
+          "route": "/site-settings",
+        },
+        {
           "route": "/theme"
         }
       ]

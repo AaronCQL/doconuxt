@@ -19,7 +19,7 @@ Doconuxt is essentially just a NuxtJS application, and the set up is similar.
     $ yarn init # npm init
     ```
 
-3. Install Nuxt and Doconuxt:
+3. Install `nuxt` and `doconuxt`:
 
     ```bash
     $ yarn add -D nuxt doconuxt # npm install -D nuxt doconuxt
@@ -39,10 +39,10 @@ Doconuxt is essentially just a NuxtJS application, and the set up is similar.
     }
     ```
 
-5. Create a `nuxt.config.js` file in the root directory and import the Doconuxt theme:
+5. Create a `nuxt.config.js` file in the root directory and import `doconuxt`:
 
     ```js{}[nuxt.config.js]
-    import doconuxt from "doconuxt-theme";
+    import doconuxt from "doconuxt";
 
     export default doconuxt;
     ```
@@ -64,9 +64,9 @@ Doconuxt is essentially just a NuxtJS application, and the set up is similar.
 
 To start writing, make sure you have a `content/` directory in the root of your project for your Markdown files.
 
-Within the `content/` directory, create an `index.md` file and fill it with some Markdown:
+Create a `content/index.md` file and fill it with some Markdown:
 
-```md{}[/content/index.md]
+```md{}[content/index.md]
 # Hello World!
 
 This is `doconuxt`.
@@ -80,4 +80,4 @@ yarn dev # npm run dev
 
 If all goes well, you should be able to open up [http://localhost:3000](http://localhost:3000), and enjoy instantaneous updates whenever you save your changes.
 
-Read on to learn how [page routing](/page-routing) works, and how to configure the [side navigation bar](/navigation).
+Read on to learn how [page routing](/page-routing) works, or how to configure the [side navigation bar](/navigation).

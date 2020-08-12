@@ -3,8 +3,8 @@
 To start configuring the side and top navigation (referred to as **Sidenav** and **Topnav**), create a `content/_config/navigation.json5` file like so:
 
 ```
-content
-├── _config
+content/
+├── _config/
 │   └── navigation.json5
 ...
 ```
@@ -66,7 +66,7 @@ Rule of thumb: the first leading `/` is always present, and the last trailing `/
 ### `title`
 
 - **Type**: `string`
-- **Description**: the title of the `Link`, shown in the sidenav and the pagination at the bottom of each page
+- **Description**: the title of the `Link`, shown in the sidenav and the pagination at the bottom of each page, and used as part of the HTML title (on page routes other than `/`)
 - **Default**: inferred from the YAML front matter title, or the first H1 tag in the Markdown content, or `Untitled` if it cannot be inferred
 
 Order of precedence: `title` > YAML front matter title > first H1 tag
@@ -85,7 +85,7 @@ The maximum number is `3`, and any number less than or equal to `1` will disable
 - **Description**: whether to show the table of contents regardless of the current route
 - **Default**: `false`
 
-### Minimal example
+### Example
 
 Taking the `content/` directory as the root, the most basic example to generate the Sidenav links to `index.md`, `nested/index.md`, and `nested/hello.md` is as follows:
 

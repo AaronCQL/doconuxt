@@ -1,19 +1,19 @@
 # Page Routing
 
-The page routing mirrors the directory structure within the `/content` directory.
+The page routing mirrors the directory structure within the `content/` directory.
 
 Any `index.md` file will be routed as the root of the directory. For example, with the following directory structure:
 
 ```
-content
+content/
 ├── index.md
 ├── welcome.md
-└── nested
+└── nested/
     ├── index.md
     └── hello.md
 ```
 
-The page routes will be transformed as such:
+And taking `content/` as the root of the relative path, the page routes will be generated as such:
 
 |   Relative Path    |   Page Route    |
 | :----------------: | :-------------: |
