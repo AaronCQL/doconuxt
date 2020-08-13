@@ -83,7 +83,7 @@ $$
 e^{i\pi} + 1 = 0
 $$
 
-## Alert blocks
+## Callout blocks
 
 <callout type="info">
 
