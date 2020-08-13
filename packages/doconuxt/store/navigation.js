@@ -21,10 +21,20 @@ async function getLinkGroups($content, linkGroups) {
 
   for (const { links } of linkGroups) {
     for (const link of links) {
-      const [{ title, toc }] = await $content("/", { deep: true })
+      const [content] = await $content("/", { deep: true })
         .where({ route: link.route })
         .only(["title", "toc"])
         .fetch();
+
+      if (!content) {
+        // eslint-disable-next-line no-console
+        console.warn(
+          `_config/navigation.json(5): the page route "${link.route}" does not yet exist. Please create the file in the appropriate location within content/.`
+        );
+        return [];
+      }
+
+      const { title, toc } = content;
       link.title = link.title || title;
       link.toc = toc.filter(
         (data) => data.depth <= (Number.isInteger(link.toc) ? link.toc : 2)
@@ -36,7 +46,7 @@ async function getLinkGroups($content, linkGroups) {
 
 function getRouteInformation(linkGroups) {
   if (!linkGroups || !linkGroups.length) {
-    return;
+    return {};
   }
 
   const links = linkGroups
@@ -71,7 +81,7 @@ export const actions = {
     } catch (error) {
       // navigation.json not found; warn user
       // eslint-disable-next-line no-console
-      console.warn("_config/navigation.json not found");
+      console.warn("_config/navigation.json(5): file not found");
     }
   },
 };

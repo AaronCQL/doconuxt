@@ -19,7 +19,7 @@ export const actions = {
     } catch (error) {
       // settings.json not found; warn user
       // eslint-disable-next-line no-console
-      console.warn("_config/settings.json not found");
+      console.warn("_config/settings.json(5): file not found");
     }
   },
 };
