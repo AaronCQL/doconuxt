@@ -34,7 +34,7 @@
     @apply my-4;
   }
   & strong {
-    @apply font-semibold;
+    @apply font-bold;
   }
 
   & hr {
@@ -95,9 +95,17 @@
 
   /* BLOCK QUOTE */
   & blockquote {
-    @apply border-l-4 pl-2;
-    border-color: var(--border);
+    @apply border-l-4 p-3 rounded;
+    background-color: var(--bg-secondary);
+    border-color: var(--primary);
     color: var(--text-secondary);
+    /* remove top/bot margins for first/last childs */
+    & :first-child {
+      @apply mt-0;
+    }
+    & :last-child {
+      @apply mb-0;
+    }
   }
 
   /* TABLES */
