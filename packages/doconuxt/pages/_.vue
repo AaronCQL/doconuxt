@@ -1,9 +1,8 @@
 <template>
   <article>
     <nuxt-content class="content-container" :document="content" />
-    <footer class="content-container my-12 space-y-4 border-t pt-4">
-      <div class="opacity-75">Last updated: {{ updatedAt }}</div>
-      <div class="grid grid-cols-2 text-primary font-semibold">
+    <footer class="content-container">
+      <div class="grid grid-cols-2 h-16 text-primary font-semibold">
         <pagination-prev
           v-if="prev"
           v-bind="prev"
@@ -54,17 +53,6 @@ export default {
           : `${this.content.title} | ${this.metaInfo.title}`
         : // let head defined in nuxt.config.js be default if no title is set
           undefined;
-    },
-    updatedAt() {
-      const options = {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      };
-      // empty array for locale so that user's locale is automatically used
-      return new Date(this.content.updatedAt).toLocaleString([], options);
     },
   },
   head() {
