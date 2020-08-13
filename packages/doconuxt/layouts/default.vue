@@ -13,7 +13,11 @@
       <div class="flex items-center">
         <theme-toggler />
         <github-link v-if="githubRepo" :github-repo="githubRepo" />
-        <sidenav-toggler class="md:hidden" @toggle-sidenav="toggleNav" />
+        <sidenav-toggler
+          class="md:hidden"
+          :is-nav-open="isNavOpen"
+          @toggle-sidenav="toggleNav"
+        />
       </div>
     </header>
 
