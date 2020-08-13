@@ -85,22 +85,22 @@ $$
 
 ## Alert blocks
 
-<alert type="info">
+<callout type="info">
 
 This is an `info` block.
 
 ```md{}[*.md]
 <!-- title is false by default -->
-<alert type="info">
+<callout type="info">
 
 This is an `info` block.
 
-</alert>
+</callout>
 ```
 
-</alert>
+</callout>
 
-<alert type="warning" :title=true>
+<callout type="warning" title="warning">
 
 First `p` child.
 
@@ -112,21 +112,45 @@ $$
 \sum_x^{e^{i\pi}}2^x=\int_x^{\infty}\frac{|x|}{\zeta}
 $$
 
-</alert>
+</callout>
 
-<alert type="danger" title="My Custom Title">
+<callout type="danger" title="My Custom Title">
 
 This is a `danger` block with a custom title.
 
 ```md{}[*.md]
-<alert type="danger" title="My Custom Title">
+<callout type="danger" title="My Custom Title">
 
 This is a `danger` block with a custom title.
 
-</alert>
+</callout>
 ```
 
-</alert>
+</callout>
+
+## Spoiler blocks
+
+<spoiler>
+
+This is **root content**.
+
+<spoiler title="First Nested Spoiler">
+
+This is **first nested content**.
+
+</spoiler>
+
+<spoiler title="Second Nested">
+
+This is **second nested content**.
+
+```js
+const a = 2;
+```
+
+</spoiler>
+
+</spoiler>
 
 ## Markdown test
 
