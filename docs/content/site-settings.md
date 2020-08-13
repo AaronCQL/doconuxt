@@ -25,21 +25,21 @@ Items marked with *important*, though not strictly required, are highly recommen
 
 ### `title`
 
-- Type: `string`
-- Description: title of the web page; used for the HTML title tag and displayed in the Topnav
-- Default: `package.json` title
+- **Description**: title of the web page; used for the HTML title tag and displayed in the Topnav
+- **Type**: `string`
+- **Default**: `package.json` title
 
 ### `description`
 
-- Type: `string`
-- Description: description of the web page; used in the HTML meta tag for the description tag
-- Default: `package.json` description
+- **Description**: description of the web page; used in the HTML meta tag for the description tag
+- **Type**: `string`
+- **Default**: `package.json` description
 
 ### `github`
 
-- Type: `string`
-- Description: the `<user>/<repo>` where your source code is at; used to generate the correct link at the Topnav
-- Default: `null`
+- **Description**: the `<user>/<repo>` where your source code is at; used to generate the correct link at the Topnav
+- **Type**: `string`
+- **Default**: `null`
 
 ### Example
 
