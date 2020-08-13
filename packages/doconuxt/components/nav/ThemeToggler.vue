@@ -1,6 +1,6 @@
 <template>
   <button
-    class="text-xl p-2 focus:outline-none"
+    class="p-2 focus:outline-none"
     aria-label="Toggle theme"
     @click="$colorMode.preference = nextTheme"
   >
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "ThemeSwitcher",
+  name: "ThemeToggler",
   computed: {
     theme() {
       return this.$colorMode.value;

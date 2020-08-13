@@ -11,29 +11,9 @@
         {{ title }}
       </nuxt-link>
       <div class="flex items-center">
-        <!-- <input
-          class="bg-gray-200 py-1 px-2 text-lg rounded-md focus:outline-primary hidden lg:block"
-          placeholder="Search text"
-          type="text"
-        /> -->
-        <theme-switcher></theme-switcher>
-        <a
-          v-if="githubRepo"
-          :href="`https://github.com/${githubRepo}`"
-          target="_blank"
-          class="focus:outline-none p-2"
-          rel="noopener noreferrer"
-        >
-          <icon-github class="w-6 h-6" />
-        </a>
-        <button
-          aria-label="Toggle side navigation"
-          class="md:hidden focus:outline-none p-2"
-          @click="toggleNav"
-        >
-          <icon-menu v-if="!isNavOpen" class="w-6 h-6" />
-          <icon-x v-else class="w-6 h-6" />
-        </button>
+        <theme-toggler />
+        <github-link v-if="githubRepo" :github-repo="githubRepo" />
+        <sidenav-toggler class="md:hidden" @toggle-sidenav="toggleNav" />
       </div>
     </header>
 
