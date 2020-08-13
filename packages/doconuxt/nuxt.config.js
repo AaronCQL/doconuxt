@@ -109,6 +109,7 @@ export default {
     routes: getContentRoutes,
   },
   content: {
+    liveEdit: false,
     markdown: {
       prism: {
         theme: "prism-themes/themes/prism-dracula.css",
