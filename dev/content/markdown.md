@@ -1,4 +1,4 @@
-# Introduction
+# Markdown Test
 
 This is a **Nuxt Content Docs Template**. Here's a [link to no where]().
 

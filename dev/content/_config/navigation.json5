@@ -2,19 +2,15 @@
   "topnav": [],
   "sidenav": [
     {
-      "category": "Getting Started", // optional; defaults to false
+      "category": "MD TEST", // optional; defaults to false
       "matchPath": "/getting-started/*", // optional; show this category if route matches matchPath, defaults to always show
       "links": [
         {
-          "route": "/introduction", // required
-          "title": "Introduction", // optional; when set will be used for sidenav and pagination; defaults to slug
+          "route": "/markdown", // required
+          "title": "Markdown", // optional; when set will be used for sidenav and pagination; defaults to slug
           "toc": 3, // optional; defaults to 2
           "showToc": true // optional; defaults to true
         },
-        {
-          "route": "/nuxt-content",
-          "title": "Nuxt Content"
-        }
       ]
     },
     {
@@ -25,10 +21,6 @@
         },
         {
           "route": "/configuration"
-        },
-        {
-          "route": "/deploying",
-          "toc": 3
         },
         {
           "route": "/notes"
