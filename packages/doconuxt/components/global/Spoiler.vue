@@ -1,9 +1,10 @@
 <template>
-  <div class="spoiler">
+  <div class="border rounded my-4">
     <!-- TOOLBAR / TITLE -->
     <button
       v-if="title"
       aria-label="Toggle spoiler visibility"
+      style="border-color: var(--border-secondary);"
       class="spoiler-header focus:outline-none w-full"
       :class="isVisible ? 'border-b' : 'opacity-75'"
       @click="isVisible = !isVisible"
@@ -49,15 +50,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.spoiler {
-  @apply border rounded my-4;
-  border-color: var(--border);
-}
-
-.spoiler-header {
-  border-color: var(--border-secondary);
-}
-
 .spoiler-content {
   @apply p-2 bg-transparent;
   /* remove top/bot margins for first/last childs */
