@@ -1,6 +1,4 @@
 .nuxt-content {
-  @apply px-4 max-w-3xl mx-auto;
-
   /* HEADERS & PARAGRAPHS */
   & h1,
   & h2,

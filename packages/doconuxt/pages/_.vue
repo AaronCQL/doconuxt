@@ -1,18 +1,18 @@
 <template>
   <article>
-    <nuxt-content ref="nuxt-content" :document="content" />
-    <footer class="nuxt-content flex justify-between items-center h-16">
-      <div>
-        <nuxt-link v-if="prev" class="flex items-center" :to="prev.route">
-          <icon-arrow-left class="mr-1 w-4 h-4" />
-          {{ prev.title }}
-        </nuxt-link>
-      </div>
-      <div>
-        <nuxt-link v-if="next" class="flex items-center" :to="next.route">
-          {{ next.title }}
-          <icon-arrow-right class="ml-1 w-4 h-4" />
-        </nuxt-link>
+    <nuxt-content class="content-container" :document="content" />
+    <footer class="content-container">
+      <div class="grid grid-cols-2 h-16 text-primary font-semibold">
+        <pagination-prev
+          v-if="prev"
+          v-bind="prev"
+          class="col-start-1 justify-start"
+        />
+        <pagination-next
+          v-if="next"
+          v-bind="next"
+          class="col-start-2 justify-end"
+        />
       </div>
     </footer>
   </article>
@@ -78,3 +78,9 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss" scoped>
+.content-container {
+  @apply px-4 max-w-3xl mx-auto;
+}
+</style>
