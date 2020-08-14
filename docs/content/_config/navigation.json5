@@ -19,6 +19,9 @@
         {
           "route": "/builtin-components",
         },
+        {
+          "route": "/deploying",
+        },
       ],
     },
     {
