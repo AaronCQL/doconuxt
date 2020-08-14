@@ -1,8 +1,10 @@
 <template>
-  <nuxt-link class="flex items-center" :to="route">
-    <icon-arrow-left class="mr-1 w-4 h-4" />
-    {{ title }}
-  </nuxt-link>
+  <div class="flex-1 flex items-center justify-start">
+    <nuxt-link class="flex items-center" :to="route">
+      <icon-arrow-left class="flex-none mr-2 w-4 h-4" />
+      {{ title }}
+    </nuxt-link>
+  </div>
 </template>
 
 <script>

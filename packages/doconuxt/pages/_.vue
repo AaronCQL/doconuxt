@@ -1,18 +1,10 @@
 <template>
   <article>
     <nuxt-content class="content-container" :document="content" />
-    <footer class="content-container">
-      <div class="grid grid-cols-2 h-16 text-primary font-semibold">
-        <pagination-prev
-          v-if="prev"
-          v-bind="prev"
-          class="col-start-1 justify-start"
-        />
-        <pagination-next
-          v-if="next"
-          v-bind="next"
-          class="col-start-2 justify-end"
-        />
+    <footer class="content-container mt-8 mb-12">
+      <div class="grid grid-cols-2 text-primary font-semibold">
+        <pagination-prev v-if="prev" v-bind="prev" class="col-start-1" />
+        <pagination-next v-if="next" v-bind="next" class="col-start-2" />
       </div>
     </footer>
   </article>
