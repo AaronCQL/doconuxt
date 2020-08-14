@@ -25,9 +25,10 @@
 - [x] Custom alert blocks
 - [ ] Component showcase
 - [ ] Directory structure tree
-- [ ] Spoiler block
+- [x] Spoiler block
 - [ ] Badges
 - [ ] Panel block (for different code languages)
+- [ ] Search box
 
 ### Future
 
