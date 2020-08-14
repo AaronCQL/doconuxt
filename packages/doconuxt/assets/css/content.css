@@ -71,7 +71,7 @@
   & > ul,
   & > ol {
     /* overall margins of one list block */
-    @apply mb-4;
+    @apply my-4;
   }
   & ul {
     @apply list-disc list-outside;
@@ -95,7 +95,7 @@
 
   /* BLOCK QUOTE */
   & blockquote {
-    @apply border-l-4 p-3 rounded;
+    @apply border-l-4 p-3 rounded my-4;
     background-color: var(--bg-secondary);
     border-color: var(--primary);
     color: var(--text-secondary);
