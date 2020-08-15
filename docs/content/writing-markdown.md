@@ -43,6 +43,24 @@ And from `welcome.md` to `nested/hello.md`:
 
 Use it as per normal. The default behaviour will open the external link in a new tab.
 
+## Code blocks
+
+Create code blocks by placing triple backticks ` ``` ` before and after the block. The language, and the file type/name can also be defined.
+
+For instance, the following in your raw Markdown file,
+
+````md[md]
+```js[myFile.js]
+console.log("Doconuxt is awesome!");
+```
+````
+
+will be rendered as:
+
+```js[myFile.js]
+console.log("Doconuxt is awesome!");
+```
+
 ## Math
 
 $\LaTeX$ flavoured math is supported natively. Internally, [$\KaTeX$](https://katex.org/) is used as the rendering engine.
