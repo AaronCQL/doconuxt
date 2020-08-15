@@ -9,25 +9,25 @@ Doconuxt is essentially just a NuxtJS application, and the set up is similar.
 1. Create and change into a new directory:
 
     ```bash
-    $ mkdir <project-name>
-    $ cd <project-name>
+    mkdir <project-name>
+    cd <project-name>
     ```
 
 2. Initialise with your package manager:
 
     ```bash
-    $ yarn init # npm init
+    yarn init # npm init
     ```
 
 3. Install `nuxt` and `doconuxt`:
 
     ```bash
-    $ yarn add -D nuxt doconuxt # npm install -D nuxt doconuxt
+    yarn add -D nuxt doconuxt # npm install -D nuxt doconuxt
     ```
 
 4. In the `package.json`, add the following scripts:
 
-    ```json{3-6}[package.json]
+    ```json{3-7}[package.json]
     {
       // ...
       "scripts": {
