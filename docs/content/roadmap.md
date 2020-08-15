@@ -17,7 +17,7 @@
 - [x] User customisable Sidenav
 - [ ] User customisable Topnav
 - [x] User customisable site metadata and settings
-- [ ] User customisable themes
+- [x] User customisable themes
 - [ ] Locale/language picker for i18n support
 
 ### Built-in components
