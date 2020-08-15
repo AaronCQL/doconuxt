@@ -2,23 +2,23 @@
 Theme configuration for colours; uses Tailwind colours.
 */
 :root {
-  --text: theme("colors.gray.900");
-  --text-secondary: theme("colors.gray.700");
-  --bg: theme("colors.white");
-  --bg-secondary: theme("colors.gray.200");
-  --primary: theme("colors.green.600");
-  --border: theme("colors.gray.400");
-  --border-secondary: theme("colors.gray.200");
+  --text: var(--light-text, theme("colors.gray.900"));
+  --text-secondary: var(--light-text-secondary, theme("colors.gray.700"));
+  --bg: var(--light-bg, theme("colors.white"));
+  --bg-secondary: var(--light-bg-secondary, theme("colors.gray.200"));
+  --primary: var(--light-primary, theme("colors.green.600"));
+  --border: var(--light-border, theme("colors.gray.400"));
+  --border-secondary: var(--light-border-secondary, theme("colors.gray.200"));
 }
 
 .dark-mode {
-  --text: theme("colors.gray.200");
-  --text-secondary: theme("colors.gray.400");
-  --bg: theme("colors.gray.900");
-  --bg-secondary: theme("colors.gray.800");
-  --primary: theme("colors.green.400");
-  --border: theme("colors.gray.700");
-  --border-secondary: theme("colors.gray.800");
+  --text: var(--dark-text, theme("colors.gray.200"));
+  --text-secondary: var(--dark-text-secondary, theme("colors.gray.400"));
+  --bg: var(--dark-bg, theme("colors.gray.900"));
+  --bg-secondary: var(--dark-bg-secondary, theme("colors.gray.800"));
+  --primary: var(--dark-primary, theme("colors.green.400"));
+  --border: var(--dark-border, theme("colors.gray.700"));
+  --border-secondary: var(--dark-border-secondary, theme("colors.gray.800"));
 }
 
 body {

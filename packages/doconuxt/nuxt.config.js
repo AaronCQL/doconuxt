@@ -1,4 +1,5 @@
 import path from "path";
+import fs from "fs";
 
 import { getRouteWithoutTrailingIndex } from "./utils/routeUtils";
 import { USER_CONFIG_DIR } from "./utils/constants";
@@ -72,6 +73,14 @@ export default {
         nuxt.options.rootDir,
         nuxt.options.dir.static || "static"
       );
+      // configure user css
+      const userThemePath = path.resolve(
+        nuxt.options.rootDir,
+        "assets/css/theme.css"
+      );
+      if (fs.existsSync(userThemePath)) {
+        nuxt.options.css.push(userThemePath);
+      }
       // configure components dir
       // see: https://github.com/nuxt/components#library-authors
       nuxt.hook("components:dirs", (dirs) => {
