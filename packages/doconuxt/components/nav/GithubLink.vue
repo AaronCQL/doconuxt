@@ -1,6 +1,6 @@
 <template>
   <a
-    class="p-2 focus:outline-none"
+    class="p-2 rounded hover:text-primary focus:outline-none focus:shadow-outline"
     aria-label="GitHub repository"
     :href="`https://github.com/${githubRepo}`"
     target="_blank"

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="p-2 focus:outline-none"
+    class="p-2 rounded hover:text-primary focus:outline-none focus:shadow-outline"
     aria-label="Toggle side navigation"
     @click="$emit('toggle-sidenav')"
   >
