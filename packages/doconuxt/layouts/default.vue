@@ -27,6 +27,7 @@
         class="z-40 nav-height flex-col fixed w-72 overflow-y-auto border-r p-4 space-y-8"
         :class="isNavOpen ? 'flex' : 'hidden md:flex'"
       >
+        <search-bar />
         <div
           v-for="(linkGroup, idx) in linkGroups"
           :key="idx"
