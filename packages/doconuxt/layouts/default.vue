@@ -79,7 +79,7 @@
         </div>
       </nav>
 
-      <Nuxt class="md:pl-72" />
+      <Nuxt class="md:pl-72" @click.native="closeNav" />
     </main>
   </div>
 </template>
