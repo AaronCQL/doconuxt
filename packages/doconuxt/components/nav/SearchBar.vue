@@ -10,8 +10,9 @@
     />
     <div
       v-if="content.length > 0 && focus"
-      class="fixed z-50 w-64 md:w-1/2 max-w-md mt-2 border border-primary rounded shadow-md overflow-y-auto divide-y"
+      class="fixed arrow-box z-50 w-64 md:w-1/2 max-w-md mt-2 border border-primary rounded shadow-md overflow-y-auto divide-y"
     >
+      <div id="arrow-pointer"></div>
       <nuxt-link
         v-for="article of content"
         :key="article.route"
@@ -86,5 +87,10 @@ input {
 .search-list {
   border-color: var(--border);
   background-color: var(--bg-secondary);
+}
+
+#arrow-pointer {
+  @apply fixed border-8 bg-transparent border-transparent z-40 -mt-4 ml-10;
+  border-bottom-color: var(--primary);
 }
 </style>
