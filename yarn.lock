@@ -3700,6 +3700,21 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+doconuxt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/doconuxt/-/doconuxt-0.0.5.tgz#290e461f2ee3e3a5632ab4dd2e630f99bf0d1b80"
+  integrity sha512-Zkn9oV4xvebP4PVpdKsS2fSrnmfDCxWH2OcRmWH+N9UkI6/QMBk1F8mLy1vu4zKHFjytRaCEjSwIIpJn32ApLQ==
+  dependencies:
+    "@nuxt/content" "^1.6.0"
+    "@nuxtjs/color-mode" "^1.0.3"
+    "@nuxtjs/google-fonts" "^1.0.0"
+    "@nuxtjs/tailwindcss" "^3.0.0"
+    katex "^0.12.0"
+    prism-themes "^1.4.0"
+    rehype-katex "^3.1.0"
+    remark-math "^2.0.1"
+    vue-scrollactive "^0.9.3"
+
 doctrine@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
@@ -9414,9 +9429,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.21:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-js@^3.5.1:
   version "3.10.0"
