@@ -3700,6 +3700,21 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+doconuxt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/doconuxt/-/doconuxt-0.0.5.tgz#290e461f2ee3e3a5632ab4dd2e630f99bf0d1b80"
+  integrity sha512-Zkn9oV4xvebP4PVpdKsS2fSrnmfDCxWH2OcRmWH+N9UkI6/QMBk1F8mLy1vu4zKHFjytRaCEjSwIIpJn32ApLQ==
+  dependencies:
+    "@nuxt/content" "^1.6.0"
+    "@nuxtjs/color-mode" "^1.0.3"
+    "@nuxtjs/google-fonts" "^1.0.0"
+    "@nuxtjs/tailwindcss" "^3.0.0"
+    katex "^0.12.0"
+    prism-themes "^1.4.0"
+    rehype-katex "^3.1.0"
+    remark-math "^2.0.1"
+    vue-scrollactive "^0.9.3"
+
 doctrine@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
@@ -5995,9 +6010,9 @@ lodash.zip@^4.2.0:
   integrity sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
 
 lodash@^4.15.0, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.3, lodash@^4.17.5:
-  version "4.17.19"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
-  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loglevel@^1.6.2:
   version "1.6.8"
