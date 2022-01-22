@@ -3700,6 +3700,21 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+doconuxt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/doconuxt/-/doconuxt-0.0.5.tgz#290e461f2ee3e3a5632ab4dd2e630f99bf0d1b80"
+  integrity sha512-Zkn9oV4xvebP4PVpdKsS2fSrnmfDCxWH2OcRmWH+N9UkI6/QMBk1F8mLy1vu4zKHFjytRaCEjSwIIpJn32ApLQ==
+  dependencies:
+    "@nuxt/content" "^1.6.0"
+    "@nuxtjs/color-mode" "^1.0.3"
+    "@nuxtjs/google-fonts" "^1.0.0"
+    "@nuxtjs/tailwindcss" "^3.0.0"
+    katex "^0.12.0"
+    prism-themes "^1.4.0"
+    rehype-katex "^3.1.0"
+    remark-math "^2.0.1"
+    vue-scrollactive "^0.9.3"
+
 doctrine@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
@@ -6423,9 +6438,9 @@ nan@^2.12.1:
   integrity sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
 
 nanoid@^3.1.10:
-  version "3.1.12"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.12.tgz#6f7736c62e8d39421601e4a0c77623a97ea69654"
-  integrity sha512-1qstj9z5+x491jfiC4Nelk+f8XBad7LN20PmyWINJEMRSf3wcAjAWysw1qaA8z6NSKe2sjq1hRSDpBH5paCb6A==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
+  integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
 
 nanomatch@^1.2.9:
   version "1.2.13"
