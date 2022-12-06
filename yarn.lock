@@ -3553,9 +3553,9 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
     ms "^2.1.1"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 decompress-response@^6.0.0:
   version "6.0.0"
@@ -3699,6 +3699,21 @@ dir-glob@^3.0.1:
   integrity sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==
   dependencies:
     path-type "^4.0.0"
+
+doconuxt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/doconuxt/-/doconuxt-0.0.5.tgz#290e461f2ee3e3a5632ab4dd2e630f99bf0d1b80"
+  integrity sha512-Zkn9oV4xvebP4PVpdKsS2fSrnmfDCxWH2OcRmWH+N9UkI6/QMBk1F8mLy1vu4zKHFjytRaCEjSwIIpJn32ApLQ==
+  dependencies:
+    "@nuxt/content" "^1.6.0"
+    "@nuxtjs/color-mode" "^1.0.3"
+    "@nuxtjs/google-fonts" "^1.0.0"
+    "@nuxtjs/tailwindcss" "^3.0.0"
+    katex "^0.12.0"
+    prism-themes "^1.4.0"
+    rehype-katex "^3.1.0"
+    remark-math "^2.0.1"
+    vue-scrollactive "^0.9.3"
 
 doctrine@1.5.0:
   version "1.5.0"
