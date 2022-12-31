@@ -3700,6 +3700,21 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+doconuxt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/doconuxt/-/doconuxt-0.0.5.tgz#290e461f2ee3e3a5632ab4dd2e630f99bf0d1b80"
+  integrity sha512-Zkn9oV4xvebP4PVpdKsS2fSrnmfDCxWH2OcRmWH+N9UkI6/QMBk1F8mLy1vu4zKHFjytRaCEjSwIIpJn32ApLQ==
+  dependencies:
+    "@nuxt/content" "^1.6.0"
+    "@nuxtjs/color-mode" "^1.0.3"
+    "@nuxtjs/google-fonts" "^1.0.0"
+    "@nuxtjs/tailwindcss" "^3.0.0"
+    katex "^0.12.0"
+    prism-themes "^1.4.0"
+    rehype-katex "^3.1.0"
+    remark-math "^2.0.1"
+    vue-scrollactive "^0.9.3"
+
 doctrine@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
@@ -4545,11 +4560,9 @@ flat-cache@^2.0.1:
     write "1.0.3"
 
 flat@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.0.tgz#dab7d71d60413becb0ac2de9bf4304495e3af6af"
-  integrity sha512-6KSMM+cHHzXC/hpldXApL2S8Uz+QZv+tq5o/L0KQYleoG+GcwrnIJhTWC7tCOiKQp8D/fIvryINU1OZCCwevjA==
-  dependencies:
-    is-buffer "~2.0.4"
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.2.tgz#8ca6fe332069ffa9d324c327198c598259ceb241"
+  integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
 
 flatted@^2.0.0:
   version "2.0.2"
@@ -5440,7 +5453,7 @@ is-buffer@^1.1.5:
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
-is-buffer@^2.0.0, is-buffer@~2.0.4:
+is-buffer@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
   integrity sha512-Kq1rokWXOPXWuaMAqZiJW4XxsmD9zGx9q4aePabbn3qCRGedtH7Cm+zV8WETitMfu1wdh+Rvd6w5egwSngUX2A==
